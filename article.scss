@@ -1,0 +1,138 @@
+@import "reset";
+
+@import "general";
+
+.title {
+  width: 70vw;
+  height: 40vh;
+  margin: auto;
+  position: relative;
+  margin-bottom: 1.5rem;
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 2rem;
+    color: $secondColor;
+    position: absolute;
+    top: 40%;
+    left: 2rem;
+  }
+}
+
+section {
+  width: 70vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  .main {
+    width: 45vw;
+    img {
+      display: block;
+      padding: 0.5rem 0;
+    }
+    p {
+      color: $secondColor;
+      text-indent: 3rem;
+      font-size: 1.5rem;
+      padding: 0.7rem 0;
+    }
+
+    ul {
+      padding: 0.85rem 0;
+      li {
+        font-size: 1.5rem;
+        &:first-child {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  .other {
+    width: 22.5vw;
+    h1 {
+      font-size: 2rem;
+      color: $themeColor;
+      margin-bottom: 0.5rem;
+    }
+    .page {
+      display: flex;
+      height: 10vh;
+
+      .num {
+        background-color: rgba(255, 151, 9, 0.25);
+        font-size: 1.5rem;
+        line-height: 10vh;
+        padding: 0 0.7rem;
+      }
+
+      h2 {
+        color: $secondColor;
+        margin: auto 0;
+        font-size: 1.15rem;
+        position: relative;
+
+        &::before,
+        ::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          z-index: -2;
+        }
+
+        &::before {
+          background-color: rgba(255, 151, 9, 0.85);
+
+          z-index: -1;
+          transition: 1s;
+        }
+        &:hover {
+          background-color: transparent;
+          z-index: 1;
+        }
+        &:hover::before,
+        :hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .much {
+      width: 22.5vw;
+      height: 7vh;
+      background-color: $themeColor;
+      text-align: center;
+      margin-top: 0.5rem;
+      border-radius: 10px;
+      a {
+        display: inline-block;
+        font-size: 1.75rem;
+        color: white;
+        text-decoration: none;
+        line-height: 7vh;
+      }
+    }
+  }
+}
+
+.prev {
+  width: 70vw;
+  margin: auto;
+  text-align: center;
+  a {
+    font-size: 2rem;
+    background-color: $themeColor;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+  }
+}

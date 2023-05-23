@@ -1,0 +1,143 @@
+$themeColor: rgb(255, 151, 9);
+$secondColor: rgb(58, 58, 58);
+$thirdColor: rgb(251, 242, 226);
+
+header {
+  background: url("./picture/seamless.png");
+  // position: sticky;
+  // top: 0;
+  // box-shadow: 0 10px 6px -6px #777;
+  // z-index: 1;
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 70vw;
+    margin: auto;
+    a {
+      img.logo {
+        width: 16vw;
+        height: 14vh;
+      }
+    }
+    .top {
+      display: flex;
+      vertical-align: bottom;
+      margin-left: auto;
+      .search {
+        padding: 0.5rem 1rem;
+
+        img {
+          height: 5vh;
+          vertical-align: bottom;
+        }
+        input {
+          display: inline-block;
+          width: 15vw;
+          height: 5vh;
+
+          &::placeholder {
+            font-size: 1.3rem;
+          }
+          &:focus {
+            outline-color: $themeColor;
+          }
+        }
+      }
+      .user {
+        padding: 0.5rem 1rem;
+
+        img {
+          height: 5vh;
+        }
+      }
+      .cart {
+        padding: 0.5rem 1rem;
+
+        img {
+          height: 5vh;
+        }
+      }
+    }
+  }
+  section.nav-list {
+    nav {
+      margin: 0.75rem 0;
+      ul {
+        width: 70vw;
+        margin: auto;
+        border: 3px solid $themeColor;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          padding: 0.5rem 3rem;
+          font-size: 2rem;
+          list-style-type: none;
+
+          a {
+            text-decoration: none;
+            color: $secondColor;
+            &:hover {
+              color: $themeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $themeColor;
+  .footer-content {
+    width: 70vw;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    .link {
+      ul {
+        display: flex;
+        li {
+          padding: 0 0.25rem;
+          list-style-type: none;
+
+          a {
+            color: $secondColor;
+            text-decoration: none;
+            &:hover {
+              color: white;
+            }
+          }
+
+          &::after {
+            content: " |";
+          }
+
+          &:last-child::after {
+            content: "";
+          }
+        }
+      }
+
+      p {
+        padding: 0.3rem;
+        color: $secondColor;
+      }
+    }
+
+    .mail {
+      p {
+        color: $secondColor;
+      }
+      .social-logo {
+        display: flex;
+        justify-content: flex-start;
+        .logo {
+          padding: 0.3rem 1rem;
+        }
+      }
+    }
+  }
+}

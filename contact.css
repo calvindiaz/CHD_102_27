@@ -1,0 +1,248 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  background: url("./picture/seamless.png");
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70vw;
+  margin: auto;
+}
+header section a img.logo {
+  width: 16vw;
+  height: 14vh;
+}
+header section .top {
+  display: flex;
+  vertical-align: bottom;
+  margin-left: auto;
+}
+header section .top .search {
+  padding: 0.5rem 1rem;
+}
+header section .top .search img {
+  height: 5vh;
+  vertical-align: bottom;
+}
+header section .top .search input {
+  display: inline-block;
+  width: 15vw;
+  height: 5vh;
+}
+header section .top .search input::-moz-placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input::placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input:focus {
+  outline-color: rgb(255, 151, 9);
+}
+header section .top .user {
+  padding: 0.5rem 1rem;
+}
+header section .top .user img {
+  height: 5vh;
+}
+header section .top .cart {
+  padding: 0.5rem 1rem;
+}
+header section .top .cart img {
+  height: 5vh;
+}
+header section.nav-list nav {
+  margin: 0.75rem 0;
+}
+header section.nav-list nav ul {
+  width: 70vw;
+  margin: auto;
+  border: 3px solid rgb(255, 151, 9);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header section.nav-list nav ul li {
+  padding: 0.5rem 3rem;
+  font-size: 2rem;
+  list-style-type: none;
+}
+header section.nav-list nav ul li a {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+header section.nav-list nav ul li a:hover {
+  color: rgb(255, 151, 9);
+}
+
+footer {
+  background-color: rgb(255, 151, 9);
+}
+footer .footer-content {
+  width: 70vw;
+  margin: 1rem auto 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-content .link ul {
+  display: flex;
+}
+footer .footer-content .link ul li {
+  padding: 0 0.25rem;
+  list-style-type: none;
+}
+footer .footer-content .link ul li a {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+footer .footer-content .link ul li a:hover {
+  color: white;
+}
+footer .footer-content .link ul li::after {
+  content: " |";
+}
+footer .footer-content .link ul li:last-child::after {
+  content: "";
+}
+footer .footer-content .link p {
+  padding: 0.3rem;
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail p {
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail .social-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .footer-content .mail .social-logo .logo {
+  padding: 0.3rem 1rem;
+}
+
+.QA-title {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.QA-title img {
+  display: block;
+}
+.QA-title h1 {
+  color: rgb(58, 58, 58);
+  padding-left: 1.5rem;
+}
+
+section.QA {
+  width: 50vw;
+  margin: auto;
+}
+section.QA .QA-item {
+  position: relative;
+  border: 3px solid rgb(255, 151, 9);
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+section.QA .QA-item .question {
+  color: rgb(58, 58, 58);
+  font-size: 1.75rem;
+}
+section.QA .QA-item .question::before {
+  content: "Q：";
+}
+section.QA .QA-item .question::after {
+  content: "+";
+  position: absolute;
+  right: 10px;
+}
+section.QA .QA-item .ans {
+  padding: 0;
+  height: 0;
+  color: rgb(58, 58, 58);
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height, padding 0.5s;
+}
+
+.open::after {
+  transform: rotate(45deg);
+}
+
+.animation {
+  transition: height, padding 0.3s;
+}
+
+.SlideDown {
+  height: auto !important;
+  padding: 1rem 2.5rem !important;
+}
+
+.contact-title {
+  width: 40vw;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+}
+.contact-title img {
+  display: block;
+}
+.contact-title h1 {
+  color: rgb(58, 58, 58);
+  padding-left: 1.5rem;
+}
+
+.dash {
+  width: 40vw;
+  margin: 0.5rem auto;
+  background-color: rgb(140, 132, 126);
+  height: 5px;
+}
+
+section.contact {
+  width: 40vw;
+  margin: auto;
+}
+section.contact form .name,
+section.contact form .gender,
+section.contact form .mail,
+section.contact form .tel,
+section.contact form .commit {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+section.contact form .name label,
+section.contact form .gender label,
+section.contact form .mail label,
+section.contact form .tel label,
+section.contact form .commit label {
+  color: rgb(58, 58, 58);
+  font-size: 1.75rem;
+}
+section.contact form .btn {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+section.contact form .btn button {
+  color: white;
+  background-color: rgb(255, 151, 9);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=contact.css.map */

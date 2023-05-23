@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  background: url("./picture/seamless.png");
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70vw;
+  margin: auto;
+}
+header section a img.logo {
+  width: 16vw;
+  height: 14vh;
+}
+header section .top {
+  display: flex;
+  vertical-align: bottom;
+  margin-left: auto;
+}
+header section .top .search {
+  padding: 0.5rem 1rem;
+}
+header section .top .search img {
+  height: 5vh;
+  vertical-align: bottom;
+}
+header section .top .search input {
+  display: inline-block;
+  width: 15vw;
+  height: 5vh;
+}
+header section .top .search input::-moz-placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input::placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input:focus {
+  outline-color: rgb(255, 151, 9);
+}
+header section .top .user {
+  padding: 0.5rem 1rem;
+}
+header section .top .user img {
+  height: 5vh;
+}
+header section .top .cart {
+  padding: 0.5rem 1rem;
+}
+header section .top .cart img {
+  height: 5vh;
+}
+header section.nav-list nav {
+  margin: 0.75rem 0;
+}
+header section.nav-list nav ul {
+  width: 70vw;
+  margin: auto;
+  border: 3px solid rgb(255, 151, 9);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header section.nav-list nav ul li {
+  padding: 0.5rem 3rem;
+  font-size: 2rem;
+  list-style-type: none;
+}
+header section.nav-list nav ul li a {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+header section.nav-list nav ul li a:hover {
+  color: rgb(255, 151, 9);
+}
+
+footer {
+  background-color: rgb(255, 151, 9);
+}
+footer .footer-content {
+  width: 70vw;
+  margin: 1rem auto 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-content .link ul {
+  display: flex;
+}
+footer .footer-content .link ul li {
+  padding: 0 0.25rem;
+  list-style-type: none;
+}
+footer .footer-content .link ul li a {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+footer .footer-content .link ul li a:hover {
+  color: white;
+}
+footer .footer-content .link ul li::after {
+  content: " |";
+}
+footer .footer-content .link ul li:last-child::after {
+  content: "";
+}
+footer .footer-content .link p {
+  padding: 0.3rem;
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail p {
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail .social-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .footer-content .mail .social-logo .logo {
+  padding: 0.3rem 1rem;
+}
+
+.title {
+  width: 70vw;
+  height: 40vh;
+  margin: auto;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.title img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.title h1 {
+  font-size: 2rem;
+  color: rgb(58, 58, 58);
+  position: absolute;
+  top: 40%;
+  left: 2rem;
+}
+
+section {
+  width: 70vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+section .main {
+  width: 45vw;
+}
+section .main img {
+  display: block;
+  padding: 0.5rem 0;
+}
+section .main p {
+  color: rgb(58, 58, 58);
+  text-indent: 3rem;
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+}
+section .main ul {
+  padding: 0.85rem 0;
+}
+section .main ul li {
+  font-size: 1.5rem;
+}
+section .main ul li:first-child {
+  list-style-type: none;
+}
+section .other {
+  width: 22.5vw;
+}
+section .other h1 {
+  font-size: 2rem;
+  color: rgb(255, 151, 9);
+  margin-bottom: 0.5rem;
+}
+section .other .page {
+  display: flex;
+  height: 10vh;
+}
+section .other .page .num {
+  background-color: rgba(255, 151, 9, 0.25);
+  font-size: 1.5rem;
+  line-height: 10vh;
+  padding: 0 0.7rem;
+}
+section .other .page h2 {
+  color: rgb(58, 58, 58);
+  margin: auto 0;
+  font-size: 1.15rem;
+  position: relative;
+}
+section .other .page h2::before,
+section .other .page h2 ::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -2;
+}
+section .other .page h2::before {
+  background-color: rgba(255, 151, 9, 0.85);
+  z-index: -1;
+  transition: 1s;
+}
+section .other .page h2:hover {
+  background-color: transparent;
+  z-index: 1;
+}
+section .other .page h2:hover::before,
+section .other .page h2 :hover::after {
+  width: 100%;
+}
+section .other .much {
+  width: 22.5vw;
+  height: 7vh;
+  background-color: rgb(255, 151, 9);
+  text-align: center;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+}
+section .other .much a {
+  display: inline-block;
+  font-size: 1.75rem;
+  color: white;
+  text-decoration: none;
+  line-height: 7vh;
+}
+
+.prev {
+  width: 70vw;
+  margin: auto;
+  text-align: center;
+}
+.prev a {
+  font-size: 2rem;
+  background-color: rgb(255, 151, 9);
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+}/*# sourceMappingURL=article.css.map */

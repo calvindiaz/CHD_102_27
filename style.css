@@ -1,0 +1,428 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  background: url("./picture/seamless.png");
+  box-shadow: 0 10px 6px -6px #777;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70vw;
+  margin: auto;
+}
+header section a img.logo {
+  width: 16vw;
+  height: 14vh;
+}
+header section .top {
+  display: flex;
+  vertical-align: bottom;
+  margin-left: auto;
+}
+header section .top .search {
+  padding: 0.5rem 1rem;
+}
+header section .top .search img {
+  height: 5vh;
+  vertical-align: bottom;
+}
+header section .top .search input {
+  display: inline-block;
+  width: 15vw;
+  height: 5vh;
+}
+header section .top .search input::-moz-placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input::placeholder {
+  font-size: 1.3rem;
+}
+header section .top .search input:focus {
+  outline-color: rgb(255, 151, 9);
+}
+header section .top .user {
+  padding: 0.5rem 1rem;
+}
+header section .top .user img {
+  height: 5vh;
+}
+header section .top .cart {
+  padding: 0.5rem 1rem;
+}
+header section .top .cart img {
+  height: 5vh;
+}
+header section.nav-list nav {
+  margin: 0.75rem 0;
+}
+header section.nav-list nav ul {
+  width: 70vw;
+  margin: auto;
+  border: 3px solid rgb(255, 151, 9);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header section.nav-list nav ul li {
+  padding: 0.5rem 3rem;
+  font-size: 2rem;
+  list-style-type: none;
+}
+header section.nav-list nav ul li a {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+header section.nav-list nav ul li a:hover {
+  color: rgb(255, 151, 9);
+}
+
+section.banner {
+  text-align: center;
+  background-color: rgb(255, 151, 9);
+}
+section.banner h1 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin: 1rem 0;
+}
+section.banner section.banner {
+  text-align: center;
+  background-color: rgb(255, 151, 9);
+}
+section.banner section.banner h1 {
+  font-size: 1.75rem;
+}
+section.banner section.banner .swiper .swiper-wrapper .swiper-slide {
+  margin: 0 auto;
+  font-size: 18px;
+  background: rgb(255, 151, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.banner section.banner .swiper .swiper-wrapper .swiper-slide a img {
+  width: 100%;
+  display: block;
+}
+
+section.news {
+  background: url("./picture/seamless.png");
+  padding: 1rem;
+}
+section.news .content {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border: 3px solid rgb(255, 151, 9);
+}
+section.news .content .main {
+  background-color: white;
+  width: 50vw;
+  height: 65vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 0;
+}
+section.news .content .main img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.news .content .main h2 {
+  padding: 1.5rem 0;
+  background-color: white;
+  font-size: 1.39rem;
+}
+section.news .content .other {
+  background-color: white;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.news .content .other .other-card {
+  border-left: 3px solid rgb(255, 151, 9);
+  border-bottom: 3px solid rgb(255, 151, 9);
+  flex: 1 1 293px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+section.news .content .other .other-card img {
+  width: 100%;
+}
+section.news .content .other .other-card h3 {
+  margin-top: auto;
+}
+section.news .content .other .more {
+  width: 20vw;
+  border-left: 3px solid rgb(255, 151, 9);
+  text-align: center;
+  margin: auto;
+  padding: 1.25rem 0;
+}
+section.news .content .other .more a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+section.news .content .other .more:hover {
+  background-color: rgb(255, 151, 9);
+}
+section.news .content .other .more:hover a {
+  color: white;
+}
+
+.new-item-title {
+  width: 70vw;
+  margin: auto;
+}
+.new-item-title h1 {
+  color: rgb(58, 58, 58);
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+section.new-item {
+  background-color: rgb(251, 242, 226);
+}
+section.new-item .items {
+  width: 70vw;
+  margin: auto;
+}
+section.new-item .items .cards {
+  display: flex;
+  justify-content: space-between;
+}
+section.new-item .items .cards .card {
+  width: 13vw;
+  margin: 0.5rem 0;
+  position: relative;
+}
+section.new-item .items .cards .card img {
+  display: block;
+  width: 100%;
+}
+section.new-item .items .cards .card p {
+  background-color: white;
+  text-align: end;
+  border: 1px solid rgb(255, 151, 9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0 0 10px 10px;
+}
+section.new-item .items .cards .card div.newtag {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -15px;
+  right: -4px;
+  background-color: rgb(237, 21, 36);
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.preorder-title {
+  letter-spacing: 0.25rem;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(255, 151, 9);
+}
+
+section.preorder {
+  background-color: rgb(251, 242, 226);
+  overflow: hidden;
+}
+section.preorder .second-swiper .swiper-wrapper {
+  width: 70vw;
+  padding: 2rem;
+}
+section.preorder .second-swiper .swiper-wrapper .swiper-slide {
+  width: 8vw;
+}
+section.preorder .second-swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+section.preorder .second-swiper .swiper-wrapper .swiper-slide p {
+  text-align: end;
+  border: 1px solid rgb(255, 151, 9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+}
+
+section.brand {
+  display: flex;
+  width: 70vw;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+section.brand .brand-card {
+  width: 10vw;
+}
+section.brand .brand-card .pic {
+  overflow: hidden;
+}
+section.brand .brand-card .pic a img {
+  display: block;
+  width: 100%;
+  height: 10vw;
+  border: 2px solid rgb(255, 151, 9);
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+}
+section.brand .brand-card .pic a img:hover {
+  transform: scale(1.03);
+}
+section.brand .brand-card h4 {
+  text-align: center;
+}
+
+section.product {
+  width: 70vw;
+  margin: auto;
+}
+section.product .product-top {
+  display: flex;
+}
+section.product .product-top h1 {
+  color: rgb(58, 58, 58);
+  font-size: 2rem;
+  margin-right: auto;
+}
+section.product .product-top a {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1.25rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(255, 151, 9);
+  border-radius: 10px;
+}
+section.product .product-top a:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+section.product .dash {
+  margin: 1rem 0;
+  height: 0.5rem;
+  background-color: rgb(255, 151, 9);
+}
+section.product .cards {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+section.product .cards .card {
+  width: 14vw;
+  height: 43vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0.6rem;
+  background-color: rgb(251, 242, 226);
+}
+section.product .cards .card .pic img {
+  display: block;
+  width: 100%;
+  height: 28vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.product .cards .card h4 {
+  font-size: 1.2rem;
+}
+section.product .cards .card .price {
+  margin-top: auto;
+  display: flex;
+}
+section.product .cards .card .price p {
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+section.product .cards .card .price button {
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: rgb(255, 151, 9);
+  cursor: pointer;
+  border: none;
+}
+section.product .cards .card:hover {
+  background-color: rgb(255, 236, 197);
+}
+
+footer {
+  background-color: rgb(255, 151, 9);
+}
+footer .footer-content {
+  width: 70vw;
+  margin: 1rem auto 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-content .link ul {
+  display: flex;
+}
+footer .footer-content .link ul li {
+  padding: 0 0.25rem;
+  list-style-type: none;
+}
+footer .footer-content .link ul li a {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+footer .footer-content .link ul li a:hover {
+  color: white;
+}
+footer .footer-content .link ul li::after {
+  content: " |";
+}
+footer .footer-content .link ul li:last-child::after {
+  content: "";
+}
+footer .footer-content .link p {
+  padding: 0.3rem;
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail p {
+  color: rgb(58, 58, 58);
+}
+footer .footer-content .mail .social-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .footer-content .mail .social-logo .logo {
+  padding: 0.3rem 1rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 55px;
+  height: 50px;
+  background-color: white;
+  color: rgb(255, 151, 9);
+  border-radius: 50%;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */
