@@ -248,12 +248,12 @@ section.contact form .tel input:focus,
 section.contact form .commit input:focus {
   outline-color: rgb(255, 151, 9);
 }
-section.contact form .message input {
+section.contact form textarea {
   font-size: 1.3rem;
   width: 40vw;
   height: 7.5vw;
 }
-section.contact form .message input:hover {
+section.contact form textarea:hover {
   outline-color: rgb(255, 151, 9);
 }
 section.contact form .btn {

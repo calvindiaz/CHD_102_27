@@ -131,6 +131,10 @@ section {
         color: white;
         text-decoration: none;
         line-height: 7vh;
+
+        &::after {
+          content: "\2BC8";
+        }
       }
     }
   }

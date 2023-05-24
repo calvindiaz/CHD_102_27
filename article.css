@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -249,6 +250,9 @@ section .other .much a {
   color: white;
   text-decoration: none;
   line-height: 7vh;
+}
+section .other .much a::after {
+  content: "⯈";
 }
 
 .prev {

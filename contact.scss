@@ -121,16 +121,14 @@ section.contact {
       }
     }
 
-    .message {
-      input {
-        font-size: 1.3rem;
+    textarea {
+      font-size: 1.3rem;
 
-        width: 40vw;
-        height: 7.5vw;
+      width: 40vw;
+      height: 7.5vw;
 
-        &:hover {
-          outline-color: $themeColor;
-        }
+      &:hover {
+        outline-color: $themeColor;
       }
     }
 
