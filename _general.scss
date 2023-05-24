@@ -6,7 +6,7 @@ header {
   background: url("./picture/seamless.png");
   // position: sticky;
   // top: 0;
-  // box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
   // z-index: 1;
   section {
     display: flex;
@@ -35,6 +35,7 @@ header {
           display: inline-block;
           width: 15vw;
           height: 5vh;
+          font-size: 1.3rem;
 
           &::placeholder {
             font-size: 1.3rem;

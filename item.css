@@ -7,6 +7,7 @@
 
 header {
   background: url("./picture/seamless.png");
+  box-shadow: 0 10px 6px -6px #777;
 }
 header section {
   display: flex;
@@ -35,6 +36,7 @@ header section .top .search input {
   display: inline-block;
   width: 15vw;
   height: 5vh;
+  font-size: 1.3rem;
 }
 header section .top .search input::-moz-placeholder {
   font-size: 1.3rem;
@@ -220,13 +222,17 @@ section .main-area .main .content .btns button.minus,
 section .main-area .main .content .btns .plus {
   font-size: 2rem;
   padding: 0.25rem 0.6rem;
+  border-radius: 5px;
 }
 section .main-area .main .content .btns button.minus {
   cursor: not-allowed;
 }
+section .main-area .main .content .btns button.plus {
+  cursor: pointer;
+}
 section .main-area .main .content .btns input {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 section .main-area .main .content .purchase {
   display: flex;

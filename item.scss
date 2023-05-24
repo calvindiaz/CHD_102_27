@@ -102,15 +102,20 @@ section {
           .plus {
             font-size: 2rem;
             padding: 0.25rem 0.6rem;
+            border-radius: 5px;
           }
 
           button.minus {
             cursor: not-allowed;
           }
 
+          button.plus {
+            cursor: pointer;
+          }
+
           input {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
           }
         }
 

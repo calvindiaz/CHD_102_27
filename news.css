@@ -7,6 +7,7 @@
 
 header {
   background: url("./picture/seamless.png");
+  box-shadow: 0 10px 6px -6px #777;
 }
 header section {
   display: flex;
@@ -35,6 +36,7 @@ header section .top .search input {
   display: inline-block;
   width: 15vw;
   height: 5vh;
+  font-size: 1.3rem;
 }
 header section .top .search input::-moz-placeholder {
   font-size: 1.3rem;
@@ -181,7 +183,7 @@ section.news .news-item .card ::after {
 section.news .news-item .card::before {
   background-color: rgba(255, 151, 9, 0.85);
   z-index: -1;
-  transition: 1s;
+  transition: 0.8s;
 }
 section.news .news-item .card:hover {
   background-color: transparent;

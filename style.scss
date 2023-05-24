@@ -40,6 +40,7 @@ header {
           vertical-align: bottom;
         }
         input {
+          font-size: 1.3rem;
           display: inline-block;
           width: 15vw;
           height: 5vh;
@@ -144,8 +145,9 @@ section.news {
     display: flex;
     justify-content: center;
     border: 3px solid $themeColor;
+    background-color: white;
+
     .main {
-      background-color: white;
       width: 50vw;
       height: 65vh;
       padding: 0 1rem;
@@ -273,7 +275,7 @@ section.new-item {
 .preorder-title {
   letter-spacing: 0.25rem;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.25rem 0;
   font-size: 1.5rem;
   color: white;
   background-color: $themeColor;
@@ -313,22 +315,23 @@ section.brand {
   margin: auto;
   padding: 1.5rem 0;
   .brand-card {
-    width: 10vw;
-
     .pic {
       overflow: hidden;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      border: 2px solid $themeColor;
+
       a {
         img {
           display: block;
           width: 100%;
-          height: 10vw;
-          border: 2px solid $themeColor;
-          border-radius: 50%;
+
           object-fit: cover;
           transition: all 0.3s ease;
 
           &:hover {
-            transform: scale(1.03);
+            transform: scale(1.125);
           }
         }
       }
@@ -481,5 +484,5 @@ footer {
   background-color: white;
   color: $themeColor;
   border-radius: 50%;
-  z-index: 1;
+  // z-index: 1;
 }

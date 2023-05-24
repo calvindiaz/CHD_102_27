@@ -8,6 +8,7 @@
 
 header {
   background: url("./picture/seamless.png");
+  box-shadow: 0 10px 6px -6px #777;
 }
 header section {
   display: flex;
@@ -36,6 +37,7 @@ header section .top .search input {
   display: inline-block;
   width: 15vw;
   height: 5vh;
+  font-size: 1.3rem;
 }
 header section .top .search input::-moz-placeholder {
   font-size: 1.3rem;
@@ -129,7 +131,7 @@ footer .footer-content .mail .social-logo .logo {
 
 .QA-title {
   width: 50vw;
-  margin: auto;
+  margin: 1.5rem auto;
   display: flex;
   align-items: center;
 }
@@ -173,7 +175,7 @@ section.QA .QA-item .ans {
   font-size: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
-  transition: height, padding 0.5s;
+  transition: height, padding 0.3s;
 }
 
 .open::after {
@@ -231,6 +233,28 @@ section.contact form .tel label,
 section.contact form .commit label {
   color: rgb(58, 58, 58);
   font-size: 1.75rem;
+}
+section.contact form .name input,
+section.contact form .gender input,
+section.contact form .mail input,
+section.contact form .tel input,
+section.contact form .commit input {
+  font-size: 1.3rem;
+}
+section.contact form .name input:focus,
+section.contact form .gender input:focus,
+section.contact form .mail input:focus,
+section.contact form .tel input:focus,
+section.contact form .commit input:focus {
+  outline-color: rgb(255, 151, 9);
+}
+section.contact form .message input {
+  font-size: 1.3rem;
+  width: 40vw;
+  height: 7.5vw;
+}
+section.contact form .message input:hover {
+  outline-color: rgb(255, 151, 9);
 }
 section.contact form .btn {
   margin: 1rem 0;

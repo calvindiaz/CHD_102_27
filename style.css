@@ -33,6 +33,7 @@ header section .top .search img {
   vertical-align: bottom;
 }
 header section .top .search input {
+  font-size: 1.3rem;
   display: inline-block;
   width: 15vw;
   height: 5vh;
@@ -122,9 +123,9 @@ section.news .content {
   display: flex;
   justify-content: center;
   border: 3px solid rgb(255, 151, 9);
+  background-color: white;
 }
 section.news .content .main {
-  background-color: white;
   width: 50vw;
   height: 65vh;
   padding: 0 1rem;
@@ -240,7 +241,7 @@ section.new-item .items .cards .card div.newtag {
 .preorder-title {
   letter-spacing: 0.25rem;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.25rem 0;
   font-size: 1.5rem;
   color: white;
   background-color: rgb(255, 151, 9);
@@ -276,24 +277,22 @@ section.brand {
   margin: auto;
   padding: 1.5rem 0;
 }
-section.brand .brand-card {
-  width: 10vw;
-}
 section.brand .brand-card .pic {
   overflow: hidden;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 151, 9);
 }
 section.brand .brand-card .pic a img {
   display: block;
   width: 100%;
-  height: 10vw;
-  border: 2px solid rgb(255, 151, 9);
-  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.3s ease;
 }
 section.brand .brand-card .pic a img:hover {
-  transform: scale(1.03);
+  transform: scale(1.125);
 }
 section.brand .brand-card h4 {
   text-align: center;
@@ -424,5 +423,4 @@ footer .footer-content .mail .social-logo .logo {
   background-color: white;
   color: rgb(255, 151, 9);
   border-radius: 50%;
-  z-index: 1;
 }/*# sourceMappingURL=style.css.map */

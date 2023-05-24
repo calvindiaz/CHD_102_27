@@ -28,6 +28,7 @@ section {
   display: flex;
   margin: auto;
   justify-content: space-between;
+
   .main {
     width: 45vw;
     img {
@@ -54,52 +55,65 @@ section {
 
   .other {
     width: 22.5vw;
-    h1 {
-      font-size: 2rem;
-      color: $themeColor;
-      margin-bottom: 0.5rem;
-    }
-    .page {
-      display: flex;
-      height: 10vh;
 
-      .num {
-        background-color: rgba(255, 151, 9, 0.25);
-        font-size: 1.5rem;
-        line-height: 10vh;
-        padding: 0 0.7rem;
+    .list {
+      position: sticky;
+      top: 0;
+      h1 {
+        font-size: 2rem;
+        color: $themeColor;
+        margin-bottom: 0.5rem;
       }
+      .page {
+        display: flex;
+        height: 10vh;
 
-      h2 {
-        color: $secondColor;
-        margin: auto 0;
-        font-size: 1.15rem;
-        position: relative;
-
-        &::before,
-        ::after {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 100%;
-          z-index: -2;
+        .num {
+          background-color: rgba(255, 151, 9, 0.25);
+          font-size: 1.5rem;
+          line-height: 10vh;
+          padding: 0 0.7rem;
         }
 
-        &::before {
-          background-color: rgba(255, 151, 9, 0.85);
+        .art-title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          h2 {
+            color: $secondColor;
 
-          z-index: -1;
-          transition: 1s;
-        }
-        &:hover {
-          background-color: transparent;
-          z-index: 1;
-        }
-        &:hover::before,
-        :hover::after {
-          width: 100%;
+            font-size: 1.15rem;
+          }
+
+          &::before,
+          ::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            z-index: -2;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &::before {
+            background-color: rgba(255, 151, 9, 0.85);
+
+            z-index: -1;
+            transition: 0.8s;
+          }
+          &:hover {
+            background-color: transparent;
+            z-index: 1;
+          }
+          &:hover::before,
+          :hover::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -124,7 +138,7 @@ section {
 
 .prev {
   width: 70vw;
-  margin: auto;
+  margin: 1.5rem auto;
   text-align: center;
   a {
     font-size: 2rem;

@@ -4,7 +4,7 @@
 
 .QA-title {
   width: 50vw;
-  margin: auto;
+  margin: 1.5rem auto;
   display: flex;
   align-items: center;
   img {
@@ -52,7 +52,7 @@ section.QA {
       border-radius: 5px;
 
       overflow: hidden;
-      transition: height, padding 0.5s;
+      transition: height, padding 0.3s;
     }
   }
 }
@@ -110,6 +110,27 @@ section.contact {
       label {
         color: $secondColor;
         font-size: 1.75rem;
+      }
+
+      input {
+        font-size: 1.3rem;
+
+        &:focus {
+          outline-color: $themeColor;
+        }
+      }
+    }
+
+    .message {
+      input {
+        font-size: 1.3rem;
+
+        width: 40vw;
+        height: 7.5vw;
+
+        &:hover {
+          outline-color: $themeColor;
+        }
       }
     }
 

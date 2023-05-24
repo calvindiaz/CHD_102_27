@@ -25,9 +25,10 @@ const swiper = new Swiper(".swiper", {
 });
 
 let secondSwiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
+  slidesPerView: 5,
   // centeredSlides: false,
   freeMode: true,
-  spaceBetween: 110,
+  spaceBetween: 150,
   grabCursor: true,
+  loop: true,
 });

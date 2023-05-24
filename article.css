@@ -7,6 +7,7 @@
 
 header {
   background: url("./picture/seamless.png");
+  box-shadow: 0 10px 6px -6px #777;
 }
 header section {
   display: flex;
@@ -35,6 +36,7 @@ header section .top .search input {
   display: inline-block;
   width: 15vw;
   height: 5vh;
+  font-size: 1.3rem;
 }
 header section .top .search input::-moz-placeholder {
   font-size: 1.3rem;
@@ -179,29 +181,36 @@ section .main ul li:first-child {
 section .other {
   width: 22.5vw;
 }
-section .other h1 {
+section .other .list {
+  position: sticky;
+  top: 0;
+}
+section .other .list h1 {
   font-size: 2rem;
   color: rgb(255, 151, 9);
   margin-bottom: 0.5rem;
 }
-section .other .page {
+section .other .list .page {
   display: flex;
   height: 10vh;
 }
-section .other .page .num {
+section .other .list .page .num {
   background-color: rgba(255, 151, 9, 0.25);
   font-size: 1.5rem;
   line-height: 10vh;
   padding: 0 0.7rem;
 }
-section .other .page h2 {
-  color: rgb(58, 58, 58);
-  margin: auto 0;
-  font-size: 1.15rem;
+section .other .list .page .art-title {
   position: relative;
+  display: flex;
+  align-items: center;
 }
-section .other .page h2::before,
-section .other .page h2 ::after {
+section .other .list .page .art-title h2 {
+  color: rgb(58, 58, 58);
+  font-size: 1.15rem;
+}
+section .other .list .page .art-title::before,
+section .other .list .page .art-title ::after {
   position: absolute;
   content: "";
   top: 0;
@@ -210,17 +219,20 @@ section .other .page h2 ::after {
   height: 100%;
   z-index: -2;
 }
-section .other .page h2::before {
+section .other .list .page .art-title:hover {
+  cursor: pointer;
+}
+section .other .list .page .art-title::before {
   background-color: rgba(255, 151, 9, 0.85);
   z-index: -1;
-  transition: 1s;
+  transition: 0.8s;
 }
-section .other .page h2:hover {
+section .other .list .page .art-title:hover {
   background-color: transparent;
   z-index: 1;
 }
-section .other .page h2:hover::before,
-section .other .page h2 :hover::after {
+section .other .list .page .art-title:hover::before,
+section .other .list .page .art-title :hover::after {
   width: 100%;
 }
 section .other .much {
@@ -241,7 +253,7 @@ section .other .much a {
 
 .prev {
   width: 70vw;
-  margin: auto;
+  margin: 1.5rem auto;
   text-align: center;
 }
 .prev a {
