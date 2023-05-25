@@ -61,20 +61,25 @@ function modalFive() {
 
 function closeBtn() {
   video.style.display = "none";
+  video.querySelector("iframe").src = "";
 }
 
 function closeBtn2() {
   videoSecond.style.display = "none";
+  videoSecond.querySelector("iframe").src = "";
 }
 
 function closeBtn3() {
   videoThird.style.display = "none";
+  videoThird.querySelector("iframe").src = "";
 }
 
 function closeBtn4() {
   videoFour.style.display = "none";
+  videoFour.querySelector("iframe").src = "";
 }
 
 function closeBtn5() {
   videoFive.style.display = "none";
+  videoFive.querySelector("iframe").src = "";
 }
