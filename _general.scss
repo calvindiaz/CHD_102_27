@@ -62,10 +62,10 @@ header {
     }
   }
   section.nav-list {
+    width: 70vw;
     nav {
       margin: 0.75rem 0;
       ul {
-        width: 70vw;
         margin: auto;
         border: 3px solid $themeColor;
         border-radius: 30px;

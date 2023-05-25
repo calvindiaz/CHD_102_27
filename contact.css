@@ -60,11 +60,13 @@ header section .top .cart {
 header section .top .cart img {
   height: 5vh;
 }
+header section.nav-list {
+  width: 70vw;
+}
 header section.nav-list nav {
   margin: 0.75rem 0;
 }
 header section.nav-list nav ul {
-  width: 70vw;
   margin: auto;
   border: 3px solid rgb(255, 151, 9);
   border-radius: 30px;
