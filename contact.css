@@ -10,64 +10,63 @@ header {
   background: url("./picture/seamless.png");
   box-shadow: 0 10px 6px -6px #777;
 }
-header section {
+header section.logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 70vw;
   margin: auto;
 }
-header section a img.logo {
+header section.logo a img.logo {
+  display: inline-block;
   width: 16vw;
-  height: 14vh;
 }
-header section .top {
+header section.logo .top {
   display: flex;
   vertical-align: bottom;
-  margin-left: auto;
 }
-header section .top .search {
+header section.logo .top .search {
   padding: 0.5rem 1rem;
 }
-header section .top .search img {
+header section.logo .top .search img {
   height: 5vh;
+  font-size: 1.3rem;
   vertical-align: bottom;
 }
-header section .top .search input {
+header section.logo .top .search input {
+  font-size: 1.3rem;
   display: inline-block;
-  width: 15vw;
   height: 5vh;
+}
+header section.logo .top .search input::-moz-placeholder {
   font-size: 1.3rem;
 }
-header section .top .search input::-moz-placeholder {
+header section.logo .top .search input::placeholder {
   font-size: 1.3rem;
 }
-header section .top .search input::placeholder {
-  font-size: 1.3rem;
-}
-header section .top .search input:focus {
+header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
 }
-header section .top .user {
+header section.logo .top .user {
   padding: 0.5rem 1rem;
 }
-header section .top .user img {
+header section.logo .top .user img {
   height: 5vh;
 }
-header section .top .cart {
+header section.logo .top .cart {
   padding: 0.5rem 1rem;
 }
-header section .top .cart img {
+header section.logo .top .cart img {
   height: 5vh;
 }
 header section.nav-list {
   width: 70vw;
+  margin: auto;
 }
 header section.nav-list nav {
-  margin: 0.75rem 0;
+  padding: 0.7rem 0;
 }
 header section.nav-list nav ul {
-  margin: auto;
   border: 3px solid rgb(255, 151, 9);
   border-radius: 30px;
   display: flex;

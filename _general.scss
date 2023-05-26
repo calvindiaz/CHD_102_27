@@ -4,11 +4,10 @@ $thirdColor: rgb(251, 242, 226);
 
 header {
   background: url("./picture/seamless.png");
-  // position: sticky;
-  // top: 0;
+
   box-shadow: 0 10px 6px -6px #777;
-  // z-index: 1;
-  section {
+
+  section.logo {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -16,26 +15,27 @@ header {
     margin: auto;
     a {
       img.logo {
+        display: inline-block;
         width: 16vw;
-        height: 14vh;
       }
     }
     .top {
       display: flex;
       vertical-align: bottom;
-      margin-left: auto;
+
       .search {
         padding: 0.5rem 1rem;
 
         img {
           height: 5vh;
+          font-size: 1.3rem;
           vertical-align: bottom;
         }
         input {
-          display: inline-block;
-          width: 15vw;
-          height: 5vh;
           font-size: 1.3rem;
+          display: inline-block;
+
+          height: 5vh;
 
           &::placeholder {
             font-size: 1.3rem;
@@ -63,10 +63,11 @@ header {
   }
   section.nav-list {
     width: 70vw;
+    margin: auto;
     nav {
-      margin: 0.75rem 0;
+      padding: 0.7rem 0;
       ul {
-        margin: auto;
+        // margin: auto;
         border: 3px solid $themeColor;
         border-radius: 30px;
         display: flex;
