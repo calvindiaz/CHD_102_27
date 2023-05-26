@@ -114,10 +114,26 @@ section.contact {
 
       input {
         font-size: 1.3rem;
+        position: relative;
+        right: 14rem;
+        border-radius: 5px;
 
         &:focus {
           outline-color: $themeColor;
         }
+      }
+    }
+
+    .option {
+      input {
+        position: relative;
+        right: 27rem;
+      }
+
+      label {
+        font-size: 1.3rem;
+        position: relative;
+        right: 27rem;
       }
     }
 

@@ -242,6 +242,9 @@ section.contact form .mail input,
 section.contact form .tel input,
 section.contact form .commit input {
   font-size: 1.3rem;
+  position: relative;
+  right: 14rem;
+  border-radius: 5px;
 }
 section.contact form .name input:focus,
 section.contact form .gender input:focus,
@@ -249,6 +252,15 @@ section.contact form .mail input:focus,
 section.contact form .tel input:focus,
 section.contact form .commit input:focus {
   outline-color: rgb(255, 151, 9);
+}
+section.contact form .option input {
+  position: relative;
+  right: 27rem;
+}
+section.contact form .option label {
+  font-size: 1.3rem;
+  position: relative;
+  right: 27rem;
 }
 section.contact form textarea {
   font-size: 1.3rem;

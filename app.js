@@ -2,7 +2,7 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
 
   slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 20,
   centeredSlides: true,
   loop: true,
 
@@ -61,25 +61,30 @@ function modalFive() {
 
 function closeBtn() {
   video.style.display = "none";
-  video.querySelector("iframe").src = "";
+  video.querySelector("iframe").src =
+    "https://www.youtube.com/embed/ymVnEm4nGgQ";
 }
 
 function closeBtn2() {
   videoSecond.style.display = "none";
-  videoSecond.querySelector("iframe").src = "";
+  videoSecond.querySelector("iframe").src =
+    "https://www.youtube.com/embed/edZnUXuhVXc";
 }
 
 function closeBtn3() {
   videoThird.style.display = "none";
-  videoThird.querySelector("iframe").src = "";
+  videoThird.querySelector("iframe").src =
+    "https://www.youtube.com/embed/b91Qfs4lMQA";
 }
 
 function closeBtn4() {
   videoFour.style.display = "none";
-  videoFour.querySelector("iframe").src = "";
+  videoFour.querySelector("iframe").src =
+    "https://www.youtube.com/embed/yBBcbb97hNU";
 }
 
 function closeBtn5() {
   videoFive.style.display = "none";
-  videoFive.querySelector("iframe").src = "";
+  videoFive.querySelector("iframe").src =
+    "https://www.youtube.com/embed/4UZ2wT9Nef4";
 }

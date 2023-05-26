@@ -12,11 +12,10 @@ $fourColor: rgb(237, 21, 36);
 
 header {
   background: url("./picture/seamless.png");
-  // position: sticky;
-  // top: 0;
+
   box-shadow: 0 10px 6px -6px #777;
-  // z-index: 3;
-  section {
+
+  section.logo {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -24,26 +23,28 @@ header {
     margin: auto;
     a {
       img.logo {
+        display: inline-block;
         width: 16vw;
-        height: 14vh;
       }
     }
     .top {
       display: flex;
       vertical-align: bottom;
-      margin-left: auto;
+
       .search {
         padding: 0.5rem 1rem;
 
         img {
           height: 5vh;
+          font-size: 1.3rem;
           vertical-align: bottom;
         }
         input {
           font-size: 1.3rem;
           display: inline-block;
-          width: 15vw;
+
           height: 5vh;
+
           &::placeholder {
             font-size: 1.3rem;
           }
@@ -70,10 +71,11 @@ header {
   }
   section.nav-list {
     width: 70vw;
+    margin: auto;
     nav {
-      margin: 0.75rem 0;
+      padding: 0.7rem 0;
       ul {
-        margin: auto;
+        // margin: auto;
         border: 3px solid $themeColor;
         border-radius: 30px;
         display: flex;
@@ -124,11 +126,9 @@ section.banner {
           justify-content: center;
           align-items: center;
 
-          a {
-            img {
-              width: 100%;
-              display: block;
-            }
+          img {
+            width: 100%;
+            display: block;
           }
         }
       }
@@ -137,7 +137,7 @@ section.banner {
 }
 
 section.news {
-  background: url("./picture/seamless.png");
+  // background: url("./picture/seamless.png");
   padding: 1rem;
   .content {
     width: 70vw;
@@ -145,28 +145,24 @@ section.news {
     display: flex;
     justify-content: center;
     border: 3px solid $themeColor;
-    background-color: white;
+    // background-color: white;
 
     .main {
       width: 50vw;
-      height: 65vh;
-      padding: 0 1rem;
+
+      padding: 1.1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin: auto 0;
       img {
         width: 100%;
-        height: 100%;
-        margin-bottom: auto;
+        display: block;
         object-fit: cover;
       }
 
-      h2 {
-        padding: 1.5rem 0;
-        background-color: white;
-
-        font-size: 1.39rem;
+      p {
+        font-size: 1.35rem;
       }
     }
 
@@ -179,16 +175,18 @@ section.news {
       .other-card {
         border-left: 3px solid $themeColor;
         border-bottom: 3px solid $themeColor;
-        flex: 1 1 293px;
+        flex-grow: 1;
         padding: 0.6rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         img {
+          display: block;
           width: 100%;
         }
 
-        h3 {
-          margin-top: auto;
+        p {
+          font-size: 1.2rem;
         }
       }
 
@@ -198,7 +196,7 @@ section.news {
 
         text-align: center;
         margin: auto;
-        padding: 1.25rem 0;
+        padding: 0.9rem 0;
         a {
           font-size: 2rem;
           text-decoration: none;
@@ -234,7 +232,7 @@ section.new-item {
     margin: auto;
     .cards {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       .card {
         width: 13vw;
 
@@ -312,8 +310,8 @@ section.brand {
   display: flex;
   width: 70vw;
   justify-content: space-evenly;
-  margin: auto;
-  padding: 1.5rem 0;
+  margin: 3.5rem auto;
+
   .brand-card {
     .pic {
       overflow: hidden;
@@ -337,7 +335,8 @@ section.brand {
       }
     }
 
-    h4 {
+    p {
+      font-size: 1.5rem;
       text-align: center;
     }
   }
@@ -380,8 +379,8 @@ section.product {
     justify-content: space-between;
     padding: 1rem 0;
     .card {
-      width: 14vw;
-      height: 43vh;
+      width: 15vw;
+      // height: 43vh;
       display: flex;
       flex-direction: column;
       padding: 0.25rem 0.6rem;
@@ -395,8 +394,8 @@ section.product {
         }
       }
 
-      h4 {
-        font-size: 1.2rem;
+      p {
+        flex: 1 1 70px;
       }
 
       .price {
@@ -479,8 +478,8 @@ footer {
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 55px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   background-color: white;
   color: $themeColor;
   border-radius: 50%;
@@ -502,17 +501,17 @@ footer {
   z-index: 1;
 
   button {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     position: absolute;
     top: 300px;
     right: 400px;
-    border-radius: 10px;
+    border-radius: 50%;
     color: white;
-    background-color: $themeColor;
+    background-color: rgb(153, 146, 146);
     border: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   iframe {

@@ -9,64 +9,63 @@ header {
   background: url("./picture/seamless.png");
   box-shadow: 0 10px 6px -6px #777;
 }
-header section {
+header section.logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 70vw;
   margin: auto;
 }
-header section a img.logo {
+header section.logo a img.logo {
+  display: inline-block;
   width: 16vw;
-  height: 14vh;
 }
-header section .top {
+header section.logo .top {
   display: flex;
   vertical-align: bottom;
-  margin-left: auto;
 }
-header section .top .search {
+header section.logo .top .search {
   padding: 0.5rem 1rem;
 }
-header section .top .search img {
+header section.logo .top .search img {
   height: 5vh;
+  font-size: 1.3rem;
   vertical-align: bottom;
 }
-header section .top .search input {
+header section.logo .top .search input {
   font-size: 1.3rem;
   display: inline-block;
-  width: 15vw;
   height: 5vh;
 }
-header section .top .search input::-moz-placeholder {
+header section.logo .top .search input::-moz-placeholder {
   font-size: 1.3rem;
 }
-header section .top .search input::placeholder {
+header section.logo .top .search input::placeholder {
   font-size: 1.3rem;
 }
-header section .top .search input:focus {
+header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
 }
-header section .top .user {
+header section.logo .top .user {
   padding: 0.5rem 1rem;
 }
-header section .top .user img {
+header section.logo .top .user img {
   height: 5vh;
 }
-header section .top .cart {
+header section.logo .top .cart {
   padding: 0.5rem 1rem;
 }
-header section .top .cart img {
+header section.logo .top .cart img {
   height: 5vh;
 }
 header section.nav-list {
   width: 70vw;
+  margin: auto;
 }
 header section.nav-list nav {
-  margin: 0.75rem 0;
+  padding: 0.7rem 0;
 }
 header section.nav-list nav ul {
-  margin: auto;
   border: 3px solid rgb(255, 151, 9);
   border-radius: 30px;
   display: flex;
@@ -110,13 +109,12 @@ section.banner section.banner .swiper .swiper-wrapper .swiper-slide {
   justify-content: center;
   align-items: center;
 }
-section.banner section.banner .swiper .swiper-wrapper .swiper-slide a img {
+section.banner section.banner .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   display: block;
 }
 
 section.news {
-  background: url("./picture/seamless.png");
   padding: 1rem;
 }
 section.news .content {
@@ -125,12 +123,10 @@ section.news .content {
   display: flex;
   justify-content: center;
   border: 3px solid rgb(255, 151, 9);
-  background-color: white;
 }
 section.news .content .main {
   width: 50vw;
-  height: 65vh;
-  padding: 0 1rem;
+  padding: 1.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,15 +134,12 @@ section.news .content .main {
 }
 section.news .content .main img {
   width: 100%;
-  height: 100%;
-  margin-bottom: auto;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.news .content .main h2 {
-  padding: 1.5rem 0;
-  background-color: white;
-  font-size: 1.39rem;
+section.news .content .main p {
+  font-size: 1.35rem;
 }
 section.news .content .other {
   background-color: white;
@@ -158,23 +151,25 @@ section.news .content .other {
 section.news .content .other .other-card {
   border-left: 3px solid rgb(255, 151, 9);
   border-bottom: 3px solid rgb(255, 151, 9);
-  flex: 1 1 293px;
+  flex-grow: 1;
   padding: 0.6rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 section.news .content .other .other-card img {
+  display: block;
   width: 100%;
 }
-section.news .content .other .other-card h3 {
-  margin-top: auto;
+section.news .content .other .other-card p {
+  font-size: 1.2rem;
 }
 section.news .content .other .more {
   width: 20vw;
   border-left: 3px solid rgb(255, 151, 9);
   text-align: center;
   margin: auto;
-  padding: 1.25rem 0;
+  padding: 0.9rem 0;
 }
 section.news .content .other .more a {
   font-size: 2rem;
@@ -207,7 +202,7 @@ section.new-item .items {
 }
 section.new-item .items .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 section.new-item .items .cards .card {
   width: 13vw;
@@ -276,8 +271,7 @@ section.brand {
   display: flex;
   width: 70vw;
   justify-content: space-evenly;
-  margin: auto;
-  padding: 1.5rem 0;
+  margin: 3.5rem auto;
 }
 section.brand .brand-card .pic {
   overflow: hidden;
@@ -296,7 +290,8 @@ section.brand .brand-card .pic a img {
 section.brand .brand-card .pic a img:hover {
   transform: scale(1.125);
 }
-section.brand .brand-card h4 {
+section.brand .brand-card p {
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -337,8 +332,7 @@ section.product .cards {
   padding: 1rem 0;
 }
 section.product .cards .card {
-  width: 14vw;
-  height: 43vh;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   padding: 0.25rem 0.6rem;
@@ -351,8 +345,8 @@ section.product .cards .card .pic img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.product .cards .card h4 {
-  font-size: 1.2rem;
+section.product .cards .card p {
+  flex: 1 1 70px;
 }
 section.product .cards .card .price {
   margin-top: auto;
@@ -420,8 +414,8 @@ footer .footer-content .mail .social-logo .logo {
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 55px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   background-color: white;
   color: rgb(255, 151, 9);
   border-radius: 50%;
@@ -446,17 +440,17 @@ footer .footer-content .mail .social-logo .logo {
 .film3 button,
 .film4 button,
 .film5 button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   position: absolute;
   top: 300px;
   right: 400px;
-  border-radius: 10px;
+  border-radius: 50%;
   color: white;
-  background-color: rgb(255, 151, 9);
+  background-color: rgb(153, 146, 146);
   border: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 .film iframe,
 .film2 iframe,
