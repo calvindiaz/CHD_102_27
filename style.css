@@ -29,19 +29,11 @@ header section.logo .top .search {
 }
 header section.logo .top .search img {
   height: 5vh;
-  font-size: 1.3rem;
   vertical-align: bottom;
 }
 header section.logo .top .search input {
-  font-size: 1.3rem;
   display: inline-block;
   height: 5vh;
-}
-header section.logo .top .search input::-moz-placeholder {
-  font-size: 1.3rem;
-}
-header section.logo .top .search input::placeholder {
-  font-size: 1.3rem;
 }
 header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
@@ -69,11 +61,11 @@ header section.nav-list nav ul {
   border: 3px solid rgb(255, 151, 9);
   border-radius: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 header section.nav-list nav ul li {
-  padding: 0.5rem 3rem;
-  font-size: 2rem;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
   list-style-type: none;
 }
 header section.nav-list nav ul li a {
@@ -337,6 +329,7 @@ section.product .cards .card {
   flex-direction: column;
   padding: 0.25rem 0.6rem;
   background-color: rgb(251, 242, 226);
+  transition: 0.3s;
 }
 section.product .cards .card .pic img {
   display: block;
@@ -365,6 +358,8 @@ section.product .cards .card .price button {
 }
 section.product .cards .card:hover {
   background-color: rgb(255, 236, 197);
+  transform: scale(1.05);
+  box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.356);
 }
 
 footer {

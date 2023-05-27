@@ -71,7 +71,7 @@
       </section>
     </header>
 
-    <section>
+    <section class="single-product">
       <div class="list">
         <ul>
           <li><a href="#">現貨商品</a></li>
@@ -113,20 +113,14 @@
               <img src="./picture/single/carbee-export.png" alt="" />
             </div>
             <div class="other-pic">
-              <div class="other-1">
-                <a href="#"
-                  ><img src="./picture/single/carbee-1.jpg" alt=""
-                /></a>
+              <div class="other">
+                <img src="./picture/single/carbee-1.jpg" alt="" />
               </div>
-              <div class="other-2">
-                <a href="#"
-                  ><img src="./picture/single/carbee-2.jpg" alt=""
-                /></a>
+              <div class="other">
+                <img src="./picture/single/carbee-2.jpg" alt="" />
               </div>
-              <div class="other-3">
-                <a href=""
-                  ><img src="./picture/single/carbee-3.jpg" alt="#"
-                /></a>
+              <div class="other">
+                <img src="./picture/single/carbee-3.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -147,7 +141,7 @@
 
             <div class="btns">
               <button class="minus" disabled="disabled">-</button>
-              <input type="tel" value="1" />
+              <input type="tel" value="1" max="5" />
               <button class="plus">+</button>
               <br />
             </div>
@@ -214,5 +208,21 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let small = document.querySelectorAll(".other img");
+      let large = document.querySelector(".pic img");
+      let originalSrc = large.src;
+
+      for (let i = 0; i < small.length; i++) {
+        small[i].onclick = () => {
+          large.src = small[i].src;
+        };
+      }
+
+      large.onclick = () => {
+        large.src = originalSrc;
+      };
+    </script>
   </body>
 </html>

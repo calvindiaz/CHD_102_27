@@ -8,7 +8,7 @@ body {
   background-color: rgb(242, 242, 242);
 }
 
-section {
+section.all-product {
   width: 70vw;
   margin: 3rem auto;
   display: flex;
@@ -79,12 +79,12 @@ section {
       padding: 1rem 0;
       .card {
         width: 15vw;
-
         display: flex;
         flex-direction: column;
         padding: 0 0.1rem;
         margin: 0 0.4rem;
         background-color: $thirdColor;
+        transition: 0.3s;
         .pic {
           img {
             width: 100%;
@@ -117,6 +117,8 @@ section {
 
         &:hover {
           background-color: rgb(255, 236, 197);
+          transform: scale(1.05);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.356);
         }
       }
     }

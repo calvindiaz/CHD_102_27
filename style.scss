@@ -36,18 +36,18 @@ header {
 
         img {
           height: 5vh;
-          font-size: 1.3rem;
+
           vertical-align: bottom;
         }
         input {
-          font-size: 1.3rem;
+          // font-size: 1.3rem;
           display: inline-block;
 
           height: 5vh;
 
-          &::placeholder {
-            font-size: 1.3rem;
-          }
+          // &::placeholder {
+          //   font-size: 1.3rem;
+          // }
           &:focus {
             outline-color: $themeColor;
           }
@@ -79,10 +79,10 @@ header {
         border: 3px solid $themeColor;
         border-radius: 30px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         li {
-          padding: 0.5rem 3rem;
-          font-size: 2rem;
+          padding: 0.5rem 0;
+          font-size: 1.5rem;
           list-style-type: none;
 
           a {
@@ -385,6 +385,7 @@ section.product {
       flex-direction: column;
       padding: 0.25rem 0.6rem;
       background-color: $thirdColor;
+      transition: 0.3s;
       .pic {
         img {
           display: block;
@@ -417,6 +418,8 @@ section.product {
 
       &:hover {
         background-color: rgb(255, 236, 197);
+        transform: scale(1.05);
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.356);
       }
     }
   }

@@ -30,19 +30,11 @@ header section.logo .top .search {
 }
 header section.logo .top .search img {
   height: 5vh;
-  font-size: 1.3rem;
   vertical-align: bottom;
 }
 header section.logo .top .search input {
-  font-size: 1.3rem;
   display: inline-block;
   height: 5vh;
-}
-header section.logo .top .search input::-moz-placeholder {
-  font-size: 1.3rem;
-}
-header section.logo .top .search input::placeholder {
-  font-size: 1.3rem;
 }
 header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
@@ -70,11 +62,11 @@ header section.nav-list nav ul {
   border: 3px solid rgb(255, 151, 9);
   border-radius: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 header section.nav-list nav ul li {
-  padding: 0.5rem 3rem;
-  font-size: 2rem;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
   list-style-type: none;
 }
 header section.nav-list nav ul li a {
@@ -152,67 +144,67 @@ footer .footer-content .mail .social-logo .logo {
   left: 2rem;
 }
 
-section {
+section.content {
   width: 70vw;
   display: flex;
   margin: auto;
   justify-content: space-between;
 }
-section .main {
+section.content .main {
   width: 45vw;
 }
-section .main img {
+section.content .main img {
   display: block;
   padding: 0.5rem 0;
 }
-section .main p {
+section.content .main p {
   color: rgb(58, 58, 58);
   text-indent: 3rem;
   font-size: 1.5rem;
   padding: 0.7rem 0;
 }
-section .main ul {
+section.content .main ul {
   padding: 0.85rem 0;
 }
-section .main ul li {
+section.content .main ul li {
   font-size: 1.5rem;
 }
-section .main ul li:first-child {
+section.content .main ul li:first-child {
   list-style-type: none;
 }
-section .other {
+section.content .other {
   width: 22.5vw;
 }
-section .other .list {
+section.content .other .list {
   position: sticky;
   top: 0;
 }
-section .other .list h1 {
+section.content .other .list h1 {
   font-size: 2rem;
   color: rgb(255, 151, 9);
   margin-bottom: 0.5rem;
 }
-section .other .list .page {
+section.content .other .list .page {
   display: flex;
   height: 10vh;
 }
-section .other .list .page .num {
+section.content .other .list .page .num {
   background-color: rgba(255, 151, 9, 0.25);
   font-size: 1.5rem;
   line-height: 10vh;
   padding: 0 0.7rem;
 }
-section .other .list .page .art-title {
+section.content .other .list .page .art-title {
   position: relative;
   display: flex;
   align-items: center;
 }
-section .other .list .page .art-title h2 {
+section.content .other .list .page .art-title h2 {
   color: rgb(58, 58, 58);
   font-size: 1.15rem;
 }
-section .other .list .page .art-title::before,
-section .other .list .page .art-title ::after {
+section.content .other .list .page .art-title::before,
+section.content .other .list .page .art-title ::after {
   position: absolute;
   content: "";
   top: 0;
@@ -221,23 +213,23 @@ section .other .list .page .art-title ::after {
   height: 100%;
   z-index: -2;
 }
-section .other .list .page .art-title:hover {
+section.content .other .list .page .art-title:hover {
   cursor: pointer;
 }
-section .other .list .page .art-title::before {
+section.content .other .list .page .art-title::before {
   background-color: rgba(255, 151, 9, 0.85);
   z-index: -1;
   transition: 0.8s;
 }
-section .other .list .page .art-title:hover {
+section.content .other .list .page .art-title:hover {
   background-color: transparent;
   z-index: 1;
 }
-section .other .list .page .art-title:hover::before,
-section .other .list .page .art-title :hover::after {
+section.content .other .list .page .art-title:hover::before,
+section.content .other .list .page .art-title :hover::after {
   width: 100%;
 }
-section .other .much {
+section.content .other .much {
   width: 22.5vw;
   height: 7vh;
   background-color: rgb(255, 151, 9);
@@ -245,14 +237,14 @@ section .other .much {
   margin-top: 0.5rem;
   border-radius: 10px;
 }
-section .other .much a {
+section.content .other .much a {
   display: inline-block;
   font-size: 1.75rem;
   color: white;
   text-decoration: none;
   line-height: 7vh;
 }
-section .other .much a::after {
+section.content .other .much a::after {
   content: "⯈";
 }
 

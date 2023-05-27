@@ -9,7 +9,7 @@ body {
   background-color: rgb(242, 242, 242);
 }
 
-section {
+section.single-product {
   width: 70vw;
   margin: 3rem auto;
   display: flex;
@@ -43,8 +43,11 @@ section {
         width: 30vw;
         margin: 0 auto;
         .pic {
+          cursor: pointer;
           img {
             width: 100%;
+            height: 540px;
+            object-fit: cover;
           }
           margin: 0 0.3rem 1rem 0.3rem;
         }
@@ -52,12 +55,12 @@ section {
         .other-pic {
           display: flex;
           background-color: $thirdColor;
-          padding: 0.5rem;
-          margin-left: 0.25rem;
-          .other-1,
-          .other-2,
-          .other-3 {
+          padding: 0.25rem;
+          margin: 0 0 0 0.25rem;
+
+          .other {
             margin: 0 0.3rem;
+            cursor: pointer;
             img {
               display: block;
               width: 100%;
@@ -115,7 +118,7 @@ section {
 
           input {
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.05rem;
           }
         }
 

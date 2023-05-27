@@ -28,18 +28,18 @@ header {
 
         img {
           height: 5vh;
-          font-size: 1.3rem;
+
           vertical-align: bottom;
         }
         input {
-          font-size: 1.3rem;
+          // font-size: 1.3rem;
           display: inline-block;
 
           height: 5vh;
 
-          &::placeholder {
-            font-size: 1.3rem;
-          }
+          // &::placeholder {
+          //   font-size: 1.3rem;
+          // }
           &:focus {
             outline-color: $themeColor;
           }
@@ -61,20 +61,20 @@ header {
       }
     }
   }
+
   section.nav-list {
     width: 70vw;
     margin: auto;
     nav {
       padding: 0.7rem 0;
       ul {
-        // margin: auto;
         border: 3px solid $themeColor;
         border-radius: 30px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         li {
-          padding: 0.5rem 3rem;
-          font-size: 2rem;
+          padding: 0.5rem 0;
+          font-size: 1.5rem;
           list-style-type: none;
 
           a {
