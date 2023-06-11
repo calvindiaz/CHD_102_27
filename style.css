@@ -13,7 +13,7 @@ header section.logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.logo a img.logo {
@@ -23,6 +23,9 @@ header section.logo a img.logo {
 header section.logo .top {
   display: flex;
   vertical-align: bottom;
+}
+header section.logo .top .menu {
+  display: none;
 }
 header section.logo .top .search {
   padding: 0.5rem 1rem;
@@ -38,6 +41,12 @@ header section.logo .top .search input {
 header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
 }
+header section.logo .top .rwd-search {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 header section.logo .top .user {
   padding: 0.5rem 1rem;
 }
@@ -50,8 +59,14 @@ header section.logo .top .cart {
 header section.logo .top .cart img {
   height: 5vh;
 }
+header section.logo .top .rwd-nav {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 header section.nav-list {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.nav-list nav {
@@ -77,6 +92,7 @@ header section.nav-list nav ul li a:hover {
 }
 
 section.banner {
+  margin-top: 0.5rem;
   text-align: center;
   background-color: rgb(255, 151, 9);
 }
@@ -84,33 +100,26 @@ section.banner h1 {
   color: white;
   font-size: 2rem;
   letter-spacing: 0.5rem;
-  margin: 1rem 0;
+  padding: 1rem 0;
 }
-section.banner section.banner {
-  text-align: center;
-  background-color: rgb(255, 151, 9);
+section.banner .swiper .swiper-wrapper {
+  margin-bottom: 1rem;
 }
-section.banner section.banner h1 {
-  font-size: 1.75rem;
+section.banner .swiper .swiper-wrapper .swiper-slide {
+  cursor: pointer;
 }
-section.banner section.banner .swiper .swiper-wrapper .swiper-slide {
-  margin: 0 auto;
-  font-size: 18px;
-  background: rgb(255, 151, 9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section.banner section.banner .swiper .swiper-wrapper .swiper-slide img {
-  width: 100%;
-  display: block;
+section.banner .swiper .swiper-wrapper .swiper-slide img {
+  border-radius: 15px;
 }
 
 section.news {
   padding: 1rem;
 }
+section.news .md-news-title {
+  display: none;
+}
 section.news .content {
-  width: 70vw;
+  width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -131,7 +140,7 @@ section.news .content .main img {
      object-fit: cover;
 }
 section.news .content .main p {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
 }
 section.news .content .other {
   background-color: white;
@@ -176,7 +185,7 @@ section.news .content .other .more:hover a {
 }
 
 .new-item-title {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 .new-item-title h1 {
@@ -189,7 +198,7 @@ section.new-item {
   background-color: rgb(251, 242, 226);
 }
 section.new-item .items {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 section.new-item .items .cards {
@@ -241,11 +250,12 @@ section.preorder {
   overflow: hidden;
 }
 section.preorder .second-swiper .swiper-wrapper {
-  width: 70vw;
+  width: 70%;
   padding: 2rem;
 }
 section.preorder .second-swiper .swiper-wrapper .swiper-slide {
   width: 8vw;
+  cursor: pointer;
 }
 section.preorder .second-swiper .swiper-wrapper .swiper-slide img {
   display: block;
@@ -261,7 +271,7 @@ section.preorder .second-swiper .swiper-wrapper .swiper-slide p {
 
 section.brand {
   display: flex;
-  width: 70vw;
+  width: 70%;
   justify-content: space-evenly;
   margin: 3.5rem auto;
 }
@@ -288,7 +298,7 @@ section.brand .brand-card p {
 }
 
 section.product {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 section.product .product-top {
@@ -318,7 +328,7 @@ section.product .dash {
   background-color: rgb(255, 151, 9);
 }
 section.product .cards {
-  width: 70vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
@@ -366,7 +376,7 @@ footer {
   background-color: rgb(255, 151, 9);
 }
 footer .footer-content {
-  width: 70vw;
+  width: 70%;
   margin: 1rem auto 0 auto;
   padding: 1rem 0;
   display: flex;
@@ -416,6 +426,11 @@ footer .footer-content .mail .social-logo .logo {
   border-radius: 50%;
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: "";
+}
+
 .film,
 .film2,
 .film3,
@@ -428,22 +443,23 @@ footer .footer-content .mail .social-logo .logo {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 21;
 }
 .film button,
 .film2 button,
 .film3 button,
 .film4 button,
 .film5 button {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
   cursor: pointer;
   position: absolute;
   top: 300px;
   right: 400px;
   border-radius: 50%;
   color: white;
-  background-color: rgb(153, 146, 146);
+  background-color: rgb(164, 159, 154);
   border: none;
   font-size: 2rem;
 }
@@ -457,4 +473,316 @@ footer .footer-content .mail .social-logo .logo {
   position: absolute;
   top: 300px;
   left: 533px;
+}
+
+@media screen and (max-width: 415px) {
+  header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header section.logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header section.logo a {
+    display: inline-block;
+    margin: auto;
+  }
+  header section.logo a img.logo {
+    width: 100%;
+    height: 100px;
+  }
+  header section.logo .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 0.1rem;
+    padding: 0.5rem 0;
+    border-top: 3px solid rgb(255, 151, 9);
+    border-bottom: 3px solid rgb(255, 151, 9);
+    position: relative;
+  }
+  header section.logo .top .menu {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 1rem;
+    position: relative;
+  }
+  header section.logo .top .menu span {
+    width: 84%;
+    height: 4px;
+    background-color: rgb(58, 58, 58);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+  }
+  header section.logo .top .menu span:nth-child(1) {
+    top: 7px;
+  }
+  header section.logo .top .menu span:nth-child(3) {
+    top: 29px;
+  }
+  header section.logo .top .search {
+    padding: 0 1rem;
+  }
+  header section.logo .top .search img {
+    height: 40px;
+  }
+  header section.logo .top .search input {
+    display: none;
+  }
+  header section.logo .top .rwd-search {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: rgb(251, 242, 226);
+  }
+  header section.logo .top .rwd-search input {
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin: 0.2rem auto;
+  }
+  header section.logo .top .rwd-search.open {
+    height: 55px;
+  }
+  header section.logo .top .user,
+  header section.logo .top .cart {
+    padding: 0 1rem;
+  }
+  header section.logo .top .user img,
+  header section.logo .top .cart img {
+    height: 40px;
+  }
+  header section.logo .top .rwd-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
+  header section.logo .top .rwd-nav ul li {
+    list-style-type: none;
+    padding: 1.2rem;
+    border-bottom: 1px solid rgb(255, 151, 9);
+  }
+  header section.logo .top .rwd-nav ul li a {
+    color: rgb(58, 58, 58);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  header section.logo .top .rwd-nav.open {
+    height: 400px;
+  }
+  header section.nav-list {
+    display: none;
+  }
+  .swiper-wrapper {
+    margin-bottom: 0;
+  }
+  .swiper-wrapper .swiper-slide img {
+    width: 100%;
+  }
+  section.news {
+    width: 100%;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  section.news .md-news-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+  section.news .md-news-title h1 {
+    display: inline-block;
+    color: rgb(58, 58, 58);
+    margin-right: auto;
+  }
+  section.news .md-news-title h1 span {
+    color: rgb(255, 151, 9);
+  }
+  section.news .md-news-title a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 35.5px;
+    font-size: 1.25rem;
+    color: rgb(58, 58, 58);
+    background-color: rgb(251, 242, 226);
+    border-radius: 5px;
+  }
+  section.news .content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.news .content .main {
+    width: 100%;
+    padding: 1.1rem;
+    display: flex;
+  }
+  section.news .content .main img {
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.news .content .main p {
+    font-size: 1rem;
+  }
+  section.news .content .other {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.news .content .other .other-card {
+    padding: 0.6rem;
+    display: flex;
+    border: none;
+  }
+  section.news .content .other .other-card img {
+    display: block;
+    width: 100%;
+  }
+  section.news .content .other .other-card p {
+    font-size: 1rem;
+  }
+  section.news .content .other .more {
+    display: none;
+  }
+  .new-item-title {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .new-item-title h1 {
+    color: rgb(58, 58, 58);
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+  section.new-item {
+    background-color: rgb(251, 242, 226);
+  }
+  section.new-item .items {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  section.new-item .items .cards {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.7rem;
+  }
+  section.new-item .items .cards .card {
+    width: 33.333333%;
+    margin: 0 0.1rem;
+  }
+  section.new-item .items .cards .card div.newtag {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    font-size: 0.7rem;
+  }
+  .preorder-title {
+    letter-spacing: normal;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  section.brand {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  section.brand .brand-card {
+    margin: 0.75rem 0;
+  }
+  section.brand .brand-card .pic {
+    width: 160px;
+    height: 160px;
+  }
+  section.brand .brand-card p {
+    font-size: 1rem;
+  }
+  section.product {
+    width: 100%;
+  }
+  section.product .product-top h1 {
+    font-size: 1.5rem;
+  }
+  section.product .product-top a {
+    font-size: 1.2rem;
+  }
+  section.product .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+  section.product .cards .card {
+    width: 187px;
+    padding: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+  section.product .cards .card .pic img {
+    height: 200px;
+  }
+  section.product .cards .card .price p {
+    font-size: 1.1rem;
+  }
+  footer .footer-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer-content .link ul {
+    display: none;
+  }
+  footer .footer-content .mail {
+    order: -1;
+    margin: auto;
+  }
+  footer .footer-content .mail .social-logo {
+    display: flex;
+    justify-content: center;
+  }
+  .film button,
+  .film2 button,
+  .film3 button,
+  .film4 button,
+  .film5 button {
+    top: 30%;
+    right: 0px;
+  }
+  .film iframe,
+  .film2 iframe,
+  .film3 iframe,
+  .film4 iframe,
+  .film5 iframe {
+    width: 100%;
+    height: 233px;
+    top: 35%;
+    left: 0;
+    right: 0;
+  }
+}
+.cross span:nth-child(1) {
+  top: 18px !important;
+  transform: rotate(45deg);
+}
+.cross span:nth-child(2) {
+  transform: scale(0);
+}
+.cross span:nth-child(3) {
+  top: 18px !important;
+  transform: rotate(135deg);
 }/*# sourceMappingURL=style.css.map */

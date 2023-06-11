@@ -25,6 +25,9 @@ header section.logo .top {
   display: flex;
   vertical-align: bottom;
 }
+header section.logo .top .menu {
+  display: none;
+}
 header section.logo .top .search {
   padding: 0.5rem 1rem;
 }
@@ -39,6 +42,12 @@ header section.logo .top .search input {
 header section.logo .top .search input:focus {
   outline-color: rgb(255, 151, 9);
 }
+header section.logo .top .rwd-search {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 header section.logo .top .user {
   padding: 0.5rem 1rem;
 }
@@ -50,6 +59,12 @@ header section.logo .top .cart {
 }
 header section.logo .top .cart img {
   height: 5vh;
+}
+header section.logo .top .rwd-nav {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 header section.nav-list {
   width: 70vw;
@@ -122,6 +137,144 @@ footer .footer-content .mail .social-logo .logo {
   padding: 0.3rem 1rem;
 }
 
+@media screen and (max-width: 415px) {
+  header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header section.logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header section.logo a {
+    display: inline-block;
+    margin: auto;
+  }
+  header section.logo a img.logo {
+    width: 100%;
+    height: 100px;
+  }
+  header section.logo .top {
+    display: flex;
+    width: 100%;
+    margin-top: 0.3rem;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border-top: 3px solid rgb(255, 151, 9);
+    border-bottom: 3px solid rgb(255, 151, 9);
+  }
+  header section.logo .top .menu {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 1rem;
+    position: relative;
+  }
+  header section.logo .top .menu span {
+    width: 84%;
+    height: 4px;
+    background-color: rgb(58, 58, 58);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+  }
+  header section.logo .top .menu span:nth-child(1) {
+    top: 7px;
+  }
+  header section.logo .top .menu span:nth-child(3) {
+    top: 29px;
+  }
+  header section.logo .top .search {
+    padding: 0 1rem;
+  }
+  header section.logo .top .search img {
+    height: 40px;
+  }
+  header section.logo .top .search input {
+    display: none;
+  }
+  header section.logo .top .rwd-search {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: rgb(251, 242, 226);
+  }
+  header section.logo .top .rwd-search input {
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin: 0.2rem auto;
+  }
+  header section.logo .top .rwd-search.open {
+    height: 55px;
+  }
+  header section.logo .top .user,
+  header section.logo .top .cart {
+    padding: 0 1rem;
+  }
+  header section.logo .top .user img,
+  header section.logo .top .cart img {
+    height: 40px;
+  }
+  header section.logo .top .rwd-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
+  header section.logo .top .rwd-nav ul li {
+    list-style-type: none;
+    padding: 1.2rem;
+    border-bottom: 1px solid rgb(255, 151, 9);
+  }
+  header section.logo .top .rwd-nav ul li a {
+    color: rgb(58, 58, 58);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  header section.logo .top .rwd-nav.open {
+    height: 400px;
+  }
+  header section.nav-list {
+    display: none;
+  }
+  footer .footer-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer-content .link ul {
+    display: none;
+  }
+  footer .footer-content .mail {
+    order: -1;
+    margin: auto;
+  }
+  footer .footer-content .mail .social-logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+.cross span:nth-child(1) {
+  top: 18px !important;
+  transform: rotate(45deg);
+}
+.cross span:nth-child(2) {
+  transform: scale(0);
+}
+.cross span:nth-child(3) {
+  top: 18px !important;
+  transform: rotate(135deg);
+}
+
 .QA-title {
   width: 50vw;
   margin: 1.5rem auto;
@@ -151,14 +304,35 @@ section.QA .QA-item {
 section.QA .QA-item .question {
   color: rgb(58, 58, 58);
   font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+}
+section.QA .QA-item .question .symbol {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+}
+section.QA .QA-item .question .symbol span {
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: rgb(58, 58, 58);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+section.QA .QA-item .question .symbol span:nth-child(1) {
+  top: 13px;
+}
+section.QA .QA-item .question .symbol span:nth-child(2) {
+  top: 13px;
+  transform: rotate(90deg);
+}
+section.QA .QA-item .question .symbol.minus span:nth-child(2) {
+  transform: rotate(180deg);
 }
 section.QA .QA-item .question::before {
   content: "Q：";
-}
-section.QA .QA-item .question::after {
-  content: "+";
-  position: absolute;
-  right: 10px;
 }
 section.QA .QA-item .ans {
   padding: 0;
@@ -168,14 +342,6 @@ section.QA .QA-item .ans {
   font-size: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
-  transition: height, padding 0.3s;
-}
-
-.open::after {
-  transform: rotate(45deg);
-}
-
-.animation {
   transition: height, padding 0.3s;
 }
 
@@ -211,47 +377,45 @@ section.contact {
   margin: auto;
 }
 section.contact form .name,
-section.contact form .gender,
 section.contact form .mail,
 section.contact form .tel,
 section.contact form .commit {
   margin: 1rem 0;
-  display: flex;
-  justify-content: space-between;
 }
 section.contact form .name label,
-section.contact form .gender label,
 section.contact form .mail label,
 section.contact form .tel label,
 section.contact form .commit label {
   color: rgb(58, 58, 58);
   font-size: 1.75rem;
+  width: 140px;
+  display: inline-block;
+  text-align: start;
 }
 section.contact form .name input,
-section.contact form .gender input,
 section.contact form .mail input,
 section.contact form .tel input,
 section.contact form .commit input {
   font-size: 1.3rem;
-  position: relative;
-  right: 10rem;
+  width: 20vw;
   border-radius: 5px;
 }
 section.contact form .name input:focus,
-section.contact form .gender input:focus,
 section.contact form .mail input:focus,
 section.contact form .tel input:focus,
 section.contact form .commit input:focus {
   outline-color: rgb(255, 151, 9);
 }
-section.contact form .option input {
-  position: relative;
-  right: 19rem;
+section.contact form .gender label.sex-lab {
+  color: rgb(58, 58, 58);
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+  font-size: 1.75rem;
 }
-section.contact form .option label {
+section.contact form .gender label.sex {
+  color: rgb(58, 58, 58);
   font-size: 1.3rem;
-  position: relative;
-  right: 19rem;
 }
 section.contact form textarea {
   font-size: 1.3rem;
@@ -274,4 +438,80 @@ section.contact form .btn button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 415px) {
+  .QA-title {
+    width: 100%;
+    justify-content: center;
+  }
+  section.QA {
+    width: 90%;
+  }
+  section.QA .QA-item {
+    padding: 0.3rem 0;
+  }
+  section.QA .QA-item .question {
+    font-size: 1.2rem;
+  }
+  section.QA .QA-item .ans {
+    font-size: 1.2rem;
+  }
+  .contact-title {
+    width: 100%;
+    justify-content: center;
+  }
+  .dash {
+    width: 80%;
+  }
+  section.contact {
+    width: 80%;
+    margin: auto;
+  }
+  section.contact form .name,
+  section.contact form .mail,
+  section.contact form .tel,
+  section.contact form .commit {
+    margin: 1rem 0;
+  }
+  section.contact form .name label,
+  section.contact form .mail label,
+  section.contact form .tel label,
+  section.contact form .commit label {
+    color: rgb(58, 58, 58);
+    font-size: 1.25rem;
+    width: 100px;
+    display: inline-block;
+    text-align: start;
+  }
+  section.contact form .name input,
+  section.contact form .mail input,
+  section.contact form .tel input,
+  section.contact form .commit input {
+    width: 220px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+  }
+  section.contact form .name input:focus,
+  section.contact form .mail input:focus,
+  section.contact form .tel input:focus,
+  section.contact form .commit input:focus {
+    outline-color: rgb(255, 151, 9);
+  }
+  section.contact form .gender label.sex-lab {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+  section.contact form .gender label.sex {
+    font-size: 1.3rem;
+  }
+  section.contact form textarea {
+    width: 100%;
+    height: auto;
+  }
+  .SlideDown {
+    padding: 0.5rem !important;
+  }
 }/*# sourceMappingURL=contact.css.map */

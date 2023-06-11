@@ -26,10 +26,20 @@
           ><img class="logo" src="./picture/logo/LogoVer2.png" alt=""
         /></a>
         <div class="top">
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="search">
             <img src="./picture/icon/scan.png" alt="" />
             <input type="text" placeholder="搜尋商品" />
           </div>
+          <!-- RWD搜尋 -->
+          <div class="rwd-search">
+            <input type="search" placeholder="搜尋商品" />
+          </div>
+          <!-- ------- -->
           <div class="user">
             <a href="#"><img src="./picture/icon/user.png" alt="" /></a>
           </div>
@@ -38,6 +48,37 @@
               ><img src="./picture/icon/shopping-cart.png" alt=""
             /></a>
           </div>
+          <!-- RWD導覽列 -->
+          <div class="rwd-nav">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-house-chimney"></i> 首頁</a
+                >
+              </li>
+              <li>
+                <a href="news.html"
+                  ><i class="fa-solid fa-bars"></i> 最新消息</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-address-card"></i> 關於我們</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-sharp fa-regular fa-message"></i> 常見Q&A</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- ---------------- -->
         </div>
       </section>
       <section class="nav-list">
@@ -114,10 +155,10 @@
             </div>
             <div class="other-pic">
               <div class="other">
-                <img src="./picture/single/carbee-1.jpg" alt="" />
+                <img src="./picture/single/carbee-export.png" alt="" />
               </div>
               <div class="other">
-                <img src="./picture/single/carbee-2.jpg" alt="" />
+                <img src="./picture/single/carbee-1.jpg" alt="" />
               </div>
               <div class="other">
                 <img src="./picture/single/carbee-3.jpg" alt="" />
@@ -129,7 +170,7 @@
             <h1>RE-MENT 星之卡比 卡比廚房 肚子餓了</h1>
             <div class="desc">
               <p>
-                以精緻盒玩商品聞名的日本RE-MENT公司，以《星之卡比》為題材推出過多款作品後，將收錄《星之卡比》當中所登場的多位角色，每位角色再搭配有廚師川崎各式不同的甜點等等，一套共有八種不同的款式可以收藏。
+                以精緻盒玩商品聞名的日本RE-MENT公司，以《星之卡比》為題材推出過多款作品後，將收錄《星之卡比》當中所登場的多位角色，每位角色再搭配有廚師川崎各式不同的餐點等等，一套共有八種不同的款式可以收藏。
               </p>
               <p>
                 商品的內容物除了人偶本身之外，還有相關的擺飾配件，並且都附有特殊的置放台，讓整體組合起來更顯現其質感。
@@ -140,8 +181,8 @@
             </div>
 
             <div class="btns">
-              <button class="minus" disabled="disabled">-</button>
-              <input type="tel" value="1" max="5" />
+              <button class="minus" disabled>-</button>
+              <input class="count" type="tel" value="1" />
               <button class="plus">+</button>
               <br />
             </div>
@@ -159,16 +200,16 @@
 
         <div class="relate-item">
           <div class="item">
-            <a href="#"><img src="./picture/single/relate-1.jpg" alt="" /></a>
+            <a href=""><img src="./picture/single/relate-1.jpg" alt="" /></a>
           </div>
           <div class="item">
-            <a href="#"><img src="./picture/single/relate-2.jpg" alt="" /></a>
+            <a href=""><img src="./picture/single/relate-2.jpg" alt="" /></a>
           </div>
           <div class="item">
-            <a href="#"><img src="./picture/single/relate-3.jpg" alt="" /></a>
+            <a href=""><img src="./picture/single/relate-3.jpg" alt="" /></a>
           </div>
           <div class="item">
-            <a href="#"><img src="./picture/single/relate-5.jpg" alt="" /></a>
+            <a href=""><img src="./picture/single/relate-5.jpg" alt="" /></a>
           </div>
         </div>
       </div>
@@ -210,18 +251,65 @@
     </footer>
 
     <script>
+      // click menu 漢堡 事件
+      let menu = document.querySelector(".menu");
+      let rwdNav = document.querySelector(".rwd-nav");
+      menu.addEventListener("click", () => {
+        menu.classList.toggle("cross");
+
+        rwdNav.classList.toggle("open");
+      });
+
+      // 在手機版，click search事件
+      let search = document.querySelector(".search");
+      let rwdSearch = document.querySelector(".rwd-search");
+
+      search.onclick = () => {
+        rwdSearch.classList.toggle("open");
+      };
+
+      // 在415px以下捲動視窗，logo可以消失
+      let logo = document.querySelector("img.logo");
+
+      window.addEventListener("scroll", () => {
+        if (window.matchMedia("(max-width: 415px)").matches) {
+          if (window.scrollY >= 200) {
+            logo.style.display = "none";
+          } else {
+            logo.style.display = "block";
+          }
+        }
+      });
+
       let small = document.querySelectorAll(".other img");
       let large = document.querySelector(".pic img");
-      let originalSrc = large.src;
 
       for (let i = 0; i < small.length; i++) {
-        small[i].onclick = () => {
+        small[i].onmouseover = () => {
           large.src = small[i].src;
         };
       }
 
-      large.onclick = () => {
-        large.src = originalSrc;
+      let plus = document.querySelector(".plus");
+      let minus = document.querySelector(".minus");
+      let count = document.querySelector(".count");
+
+      plus.onclick = (e) => {
+        let qty = e.target.previousElementSibling;
+        qty.value = parseInt(qty.value) + 1;
+        if (qty.value > 1) {
+          minus.disabled = false;
+          minus.style.cursor = "pointer";
+        }
+      };
+
+      minus.onclick = (e) => {
+        let qty = e.target.nextElementSibling;
+        if (qty.value >= 2) {
+          qty.value = parseInt(qty.value) - 1;
+        }
+        minus.disabled = qty.value < 2;
+        minus.style.cursor = qty.value == 1 ? "not-allowed" : "pointer";
       };
     </script>
   </body>

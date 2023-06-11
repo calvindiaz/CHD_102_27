@@ -31,14 +31,42 @@ section.QA {
     .question {
       color: $secondColor;
       font-size: 1.75rem;
-      &::before {
-        content: "Q：";
+      display: flex;
+      align-items: center;
+      .symbol {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+
+        span {
+          position: absolute;
+          width: 60%;
+          height: 4px;
+
+          background-color: $secondColor;
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          &:nth-child(1) {
+            top: 13px;
+          }
+          &:nth-child(2) {
+            top: 13px;
+            transform: rotate(90deg);
+          }
+        }
+
+        &.minus {
+          span {
+            &:nth-child(2) {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
 
-      &::after {
-        content: "+";
-        position: absolute;
-        right: 10px;
+      &::before {
+        content: "Q：";
       }
     }
 
@@ -55,16 +83,6 @@ section.QA {
       transition: height, padding 0.3s;
     }
   }
-}
-
-.open {
-  &::after {
-    transform: rotate(45deg);
-  }
-}
-
-.animation {
-  transition: height, padding 0.3s;
 }
 
 .SlideDown {
@@ -100,22 +118,22 @@ section.contact {
   margin: auto;
   form {
     .name,
-    .gender,
     .mail,
     .tel,
     .commit {
       margin: 1rem 0;
-      display: flex;
-      justify-content: space-between;
+
       label {
         color: $secondColor;
         font-size: 1.75rem;
+        width: 140px;
+        display: inline-block;
+        text-align: start;
       }
 
       input {
         font-size: 1.3rem;
-        position: relative;
-        right: 10rem;
+        width: 20vw;
         border-radius: 5px;
 
         &:focus {
@@ -124,16 +142,19 @@ section.contact {
       }
     }
 
-    .option {
-      input {
-        position: relative;
-        right: 19rem;
-      }
+    .gender {
+      label.sex-lab {
+        color: $secondColor;
 
-      label {
+        display: inline-block;
+        width: 140px;
+        text-align: left;
+        font-size: 1.75rem;
+      }
+      label.sex {
+        color: $secondColor;
+
         font-size: 1.3rem;
-        position: relative;
-        right: 19rem;
       }
     }
 
@@ -162,5 +183,89 @@ section.contact {
         cursor: pointer;
       }
     }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .QA-title {
+    width: 100%;
+    justify-content: center;
+  }
+
+  section.QA {
+    width: 90%;
+
+    .QA-item {
+      padding: 0.3rem 0;
+      .question {
+        font-size: 1.2rem;
+      }
+
+      .ans {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .contact-title {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dash {
+    width: 80%;
+  }
+
+  section.contact {
+    width: 80%;
+    margin: auto;
+    form {
+      .name,
+      .mail,
+      .tel,
+      .commit {
+        margin: 1rem 0;
+
+        label {
+          color: $secondColor;
+          font-size: 1.25rem;
+          width: 100px;
+          display: inline-block;
+          text-align: start;
+        }
+
+        input {
+          width: 220px;
+          font-size: 1.3rem;
+
+          border-radius: 5px;
+
+          &:focus {
+            outline-color: $themeColor;
+          }
+        }
+      }
+
+      .gender {
+        label.sex-lab {
+          display: inline-block;
+          width: 100px;
+          text-align: left;
+          font-size: 1.25rem;
+        }
+        label.sex {
+          font-size: 1.3rem;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .SlideDown {
+    padding: 0.5rem !important;
   }
 }

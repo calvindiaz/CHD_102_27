@@ -26,10 +26,20 @@
           ><img class="logo" src="./picture/logo/LogoVer2.png" alt=""
         /></a>
         <div class="top">
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="search">
             <img src="./picture/icon/scan.png" alt="" />
             <input type="text" placeholder="搜尋商品" />
           </div>
+          <!-- RWD搜尋 -->
+          <div class="rwd-search">
+            <input type="search" placeholder="搜尋商品" />
+          </div>
+          <!-- ------- -->
           <div class="user">
             <a href="#"><img src="./picture/icon/user.png" alt="" /></a>
           </div>
@@ -38,6 +48,38 @@
               ><img src="./picture/icon/shopping-cart.png" alt=""
             /></a>
           </div>
+
+          <!-- RWD導覽列 -->
+          <div class="rwd-nav">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-house-chimney"></i> 首頁</a
+                >
+              </li>
+              <li>
+                <a href="news.html"
+                  ><i class="fa-solid fa-bars"></i> 最新消息</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-address-card"></i> 關於我們</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-sharp fa-regular fa-message"></i> 常見Q&A</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- ---------------- -->
         </div>
       </section>
       <section class="nav-list">
@@ -232,5 +274,37 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // click menu 漢堡 事件
+      let menu = document.querySelector(".menu");
+      let rwdNav = document.querySelector(".rwd-nav");
+      menu.addEventListener("click", () => {
+        menu.classList.toggle("cross");
+
+        rwdNav.classList.toggle("open");
+      });
+
+      // 在手機版，click search事件
+      let search = document.querySelector(".search");
+      let rwdSearch = document.querySelector(".rwd-search");
+
+      search.onclick = () => {
+        rwdSearch.classList.toggle("open");
+      };
+
+      // 在415px以下捲動視窗，logo可以消失
+      let logo = document.querySelector("img.logo");
+
+      window.addEventListener("scroll", () => {
+        if (window.matchMedia("(max-width: 415px)").matches) {
+          if (window.scrollY >= 550) {
+            logo.style.display = "none";
+          } else {
+            logo.style.display = "block";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

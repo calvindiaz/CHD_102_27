@@ -1,12 +1,9 @@
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-
-  slidesPerView: 3,
-  spaceBetween: 20,
   centeredSlides: true,
   loop: true,
 
-  // // If we need pagination
+  // If we need pagination
   // pagination: {
   //   el: ".swiper-pagination",
   //   clickable: true,
@@ -18,6 +15,16 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+  },
   // And if we need scrollbar
   // scrollbar: {
   //   el: ".swiper-scrollbar",
@@ -25,14 +32,22 @@ const swiper = new Swiper(".swiper", {
 });
 
 let secondSwiper = new Swiper(".mySwiper", {
-  slidesPerView: 5,
-
   freeMode: true,
-  spaceBetween: 150,
-  grabCursor: true,
-  // loop: true,
+
+  breakpoints: {
+    375: {
+      slidesPerView: 2,
+      spaceBetween: 60,
+    },
+
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 130,
+    },
+  },
 });
 
+// 輪播的iframe modal視窗
 let video = document.querySelector(".film");
 let videoSecond = document.querySelector(".film2");
 let videoThird = document.querySelector(".film3");
@@ -88,3 +103,33 @@ function closeBtn5() {
   videoFive.querySelector("iframe").src =
     "https://www.youtube.com/embed/4UZ2wT9Nef4";
 }
+
+// click menu 漢堡 事件
+let menu = document.querySelector(".menu");
+let rwdNav = document.querySelector(".rwd-nav");
+menu.addEventListener("click", () => {
+  menu.classList.toggle("cross");
+
+  rwdNav.classList.toggle("open");
+});
+
+// 在手機版，click search事件
+let search = document.querySelector(".search");
+let rwdSearch = document.querySelector(".rwd-search");
+
+search.onclick = () => {
+  rwdSearch.classList.toggle("open");
+};
+
+// 在415px以下捲動視窗，logo可以消失
+let logo = document.querySelector("img.logo");
+
+window.addEventListener("scroll", () => {
+  if (window.matchMedia("(max-width: 415px)").matches) {
+    if (window.scrollY >= 550) {
+      logo.style.display = "none";
+    } else {
+      logo.style.display = "block";
+    }
+  }
+});

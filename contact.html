@@ -27,10 +27,20 @@
           ><img class="logo" src="./picture/logo/LogoVer2.png" alt=""
         /></a>
         <div class="top">
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="search">
             <img src="./picture/icon/scan.png" alt="" />
             <input type="text" placeholder="搜尋商品" />
           </div>
+          <!-- RWD搜尋 -->
+          <div class="rwd-search">
+            <input type="search" placeholder="搜尋商品" />
+          </div>
+          <!-- ------- -->
           <div class="user">
             <a href="#"><img src="./picture/icon/user.png" alt="" /></a>
           </div>
@@ -39,6 +49,37 @@
               ><img src="./picture/icon/shopping-cart.png" alt=""
             /></a>
           </div>
+          <!-- RWD導覽列 -->
+          <div class="rwd-nav">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-house-chimney"></i> 首頁</a
+                >
+              </li>
+              <li>
+                <a href="news.html"
+                  ><i class="fa-solid fa-bars"></i> 最新消息</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-address-card"></i> 關於我們</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-sharp fa-regular fa-message"></i> 常見Q&A</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- ---------------- -->
         </div>
       </section>
       <section class="nav-list">
@@ -79,20 +120,38 @@
 
     <section class="QA">
       <div class="QA-item">
-        <div class="question">為什麼下訂單了，模型過這麼久都還沒來？</div>
+        <div class="question">
+          為什麼下訂單了，模型過這麼久都還沒來？
+          <div class="symbol">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="ans">
           大部分的廠商都是會先釋出商品的原型、半成品或完成品，以及相關發售情報，之後就會開始開放預購。
           至於中間要隔多久才能真正拿到模型，則是要看各品牌的狀況
         </div>
       </div>
       <div class="QA-item">
-        <div class="question">模型發售延期要到什麼時候呀，等了好久還沒拿到</div>
+        <div class="question">
+          模型發售延期要到什麼時候呀，等了好久還沒拿到
+          <div class="symbol">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="ans">
           發售延期都還是得以廠商公告為主 然而國外發貨及延期資訊僅供參考
         </div>
       </div>
       <div class="QA-item">
-        <div class="question">什麼是砍單？為什麼明明預購了卻拿不到模型？</div>
+        <div class="question">
+          什麼是砍單？為什麼明明預購了卻拿不到模型？
+          <div class="symbol">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="ans">
           這也是模型玩具世界中常見及特別的狀況，因為廠商產能或配量關係而有限制數量狀況發生，最後超過配量的部分就只能做砍單處理
         </div>
@@ -100,13 +159,23 @@
       <div class="QA-item">
         <div class="question">
           終於拿到模型了！可是看起來好像有點瑕疵...該怎麼處理？
+          <div class="symbol">
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div class="ans">
           請務必「立即拍成影片留存」聯絡給我們的客服幫忙確認狀況
         </div>
       </div>
       <div class="QA-item">
-        <div class="question">若還有其他問題，該怎麼詢問你們？</div>
+        <div class="question">
+          若還有其他問題，該怎麼詢問你們？
+          <div class="symbol">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="ans">可以填寫下方的聯絡表單，我們會盡快回覆</div>
       </div>
     </section>
@@ -120,36 +189,36 @@
       <form action="">
         <div class="name">
           <label for="">姓名：</label>
-          <input type="text" style="width: 20vw" />
+          <input type="text" />
         </div>
 
         <div class="gender">
-          <label for="">性別：</label>
+          <label class="sex-lab" for="">性別：</label>
 
-          <div class="option">
-            <input type="radio" name="gender" />
-            <label for="contactChoice1">男</label>
+          <!-- <div class="option"> -->
+          <input type="radio" name="gender" />
+          <label class="sex" for="">男</label>
 
-            <input type="radio" name="gender" />
-            <label for="contactChoice1">女</label>
+          <input type="radio" name="gender" />
+          <label class="sex" for="">女</label>
 
-            <input type="radio" name="gender" />
-            <label for="contactChoice3">不填寫</label>
-          </div>
+          <input type="radio" name="gender" />
+          <label class="sex" for="">不填寫</label>
+          <!-- </div> -->
         </div>
 
         <div class="mail">
           <label for="">E-MAIL：</label>
-          <input type="email" style="width: 20vw" />
+          <input type="email" />
         </div>
 
         <div class="tel">
           <label for="">聯絡電話：</label>
-          <input type="tel" style="width: 20vw" />
+          <input type="tel" />
         </div>
 
         <div class="commit"><label for="">問題描述：</label></div>
-        <textarea name="" id=""></textarea>
+        <textarea></textarea>
 
         <div class="btn">
           <button style="background-color: gray">清除</button>
@@ -191,17 +260,49 @@
     </footer>
 
     <script>
-      let question = document.querySelectorAll(".question");
-      for (let label of question) {
-        label.onclick = open;
+      // click menu 漢堡 事件
+      let menu = document.querySelector(".menu");
+      let rwdNav = document.querySelector(".rwd-nav");
+      menu.addEventListener("click", () => {
+        menu.classList.toggle("cross");
+
+        rwdNav.classList.toggle("open");
+      });
+
+      // 在手機版，click search事件
+      let search = document.querySelector(".search");
+      let rwdSearch = document.querySelector(".rwd-search");
+
+      search.onclick = () => {
+        rwdSearch.classList.toggle("open");
+      };
+
+      let questions = document.querySelectorAll(".question");
+      for (let question of questions) {
+        question.onclick = open;
       }
 
       function open() {
         let Q = event.target.closest(".question");
         let A = Q.nextElementSibling;
+        let symbol = Q.firstElementChild;
+
         A.classList.toggle("SlideDown");
-        Q.classList.toggle("open");
+        symbol.classList.toggle("minus");
       }
+
+      // 在415px以下捲動視窗，logo可以消失
+      let logo = document.querySelector("img.logo");
+
+      window.addEventListener("scroll", () => {
+        if (window.matchMedia("(max-width: 415px)").matches) {
+          if (window.scrollY >= 100) {
+            logo.style.display = "none";
+          } else {
+            logo.style.display = "block";
+          }
+        }
+      });
     </script>
   </body>
 </html>

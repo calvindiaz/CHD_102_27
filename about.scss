@@ -83,7 +83,7 @@ section.logo-desc {
 
         position: relative;
         font-size: 1.2rem;
-        right: -75px;
+        right: -55px;
       }
     }
   }
@@ -121,6 +121,65 @@ section.address {
         color: $secondColor;
         font-size: 1.5rem;
         list-style-type: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .title {
+    margin: 1rem auto;
+    p {
+      text-indent: 1rem;
+      text-align: start;
+      font-size: 1.2rem;
+    }
+  }
+
+  section.logo-desc {
+    display: none;
+  }
+
+  section.map {
+    background-image: url("./picture/seamless.png");
+    .content {
+      width: 100%;
+      margin: auto;
+      .title {
+        font-size: 0.5rem;
+        text-align: center;
+      }
+
+      .embed {
+        width: 100%;
+
+        position: relative;
+        aspect-ratio: 4/3;
+        iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  section.address {
+    background-color: $thirdColor;
+
+    .content {
+      width: 100%;
+      // margin: auto;
+      // padding: 1rem 0;
+      ul {
+        li {
+          // padding: 0.5rem 0;
+          // color: $secondColor;
+          font-size: 1.3rem;
+          // list-style-type: none;
+        }
       }
     }
   }

@@ -35,18 +35,62 @@
           ><img class="logo" src="./picture/logo/LogoVer2.png" alt=""
         /></a>
         <div class="top">
+          <!-- RWD漢堡條 -->
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- ---------------- -->
           <div class="search">
             <img src="./picture/icon/scan.png" alt="" />
-            <input type="text" placeholder="搜尋商品" />
+            <input type="search" placeholder="搜尋商品" />
           </div>
+          <!-- RWD搜尋 -->
+          <div class="rwd-search">
+            <input type="search" placeholder="搜尋商品" />
+          </div>
+          <!-- ------- -->
           <div class="user">
             <a href="#"><img src="./picture/icon/user.png" alt="" /></a>
           </div>
+
           <div class="cart">
             <a href="#"
               ><img src="./picture/icon/shopping-cart.png" alt=""
             /></a>
           </div>
+          <!-- RWD導覽列 -->
+          <div class="rwd-nav">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-house-chimney"></i> 首頁</a
+                >
+              </li>
+              <li>
+                <a href="news.html"
+                  ><i class="fa-solid fa-bars"></i> 最新消息</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-address-card"></i> 關於我們</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-sharp fa-regular fa-message"></i> 常見Q&A</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- ---------------- -->
         </div>
       </section>
       <section class="nav-list">
@@ -112,15 +156,24 @@
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev">
+          <img src="./picture/icon/left-arrow.png" alt="" />
+        </div>
+        <div class="swiper-button-next">
+          <img src="./picture/icon/right-arrow.png" alt="" />
+        </div>
 
         <!-- If we need scrollbar -->
         <!-- <div class="swiper-scrollbar"></div> -->
+        <!-- </div> -->
       </div>
     </section>
     <!-- News -->
     <section class="news">
+      <div class="md-news-title">
+        <h1>最新消息<span>NEWS</span></h1>
+        <a href="./news.html">看更多</a>
+      </div>
       <div class="content">
         <div class="main">
           <img src="./picture/news/mario-export.png" alt="" />
@@ -218,7 +271,7 @@
             <p>2023年8月發售</p>
           </div>
           <div class="swiper-slide">
-            <img src="./picture/order/preorder-2.png" alt="" />
+            <img src="./picture/order/tokyo.png" alt="" />
             <p>2023年8月發售</p>
           </div>
           <div class="swiper-slide">
@@ -238,7 +291,7 @@
             <p>2023年10月發售</p>
           </div>
           <div class="swiper-slide">
-            <img src="./picture/order/tokyo.png" alt="" />
+            <img src="./picture/order/preorder-2.png" alt="" />
             <p>2023年11月發售</p>
           </div>
         </div>
@@ -276,7 +329,7 @@
     <!-- 本站商品 -->
     <section class="product">
       <div class="product-top">
-        <h1>本站商品 Product</h1>
+        <h1>本站商品 Products</h1>
         <a href="./products.html">逛逛去</a>
       </div>
       <div class="dash"></div>
