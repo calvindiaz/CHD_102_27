@@ -221,7 +221,7 @@
         <textarea></textarea>
 
         <div class="btn">
-          <button style="background-color: gray">清除</button>
+          <button type="reset" style="background-color: gray">清除</button>
           <button type="submit">送出</button>
         </div>
       </form>
@@ -291,15 +291,17 @@
         symbol.classList.toggle("minus");
       }
 
+      let msg = document.querySelector("textarea");
+
       // 在415px以下捲動視窗，logo可以消失
       let logo = document.querySelector("img.logo");
 
       window.addEventListener("scroll", () => {
         if (window.matchMedia("(max-width: 415px)").matches) {
-          if (window.scrollY >= 100) {
-            logo.style.display = "none";
+          if (window.scrollY >= 150) {
+            logo.classList.add("slideup");
           } else {
-            logo.style.display = "block";
+            logo.classList.remove("slideup");
           }
         }
       });

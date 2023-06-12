@@ -32,6 +32,15 @@ search.onclick = () => {
   rwdSearch.classList.toggle("open");
 };
 
+// 捲動至頁頂
+let toTop = document.querySelector(".scroll-to-top");
+toTop.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 // 在max-width:415px 往下捲動視窗，logo消失
 // 手機版的分類列表出現
 let logo = document.querySelector("img.logo");
@@ -42,22 +51,31 @@ let list = document.querySelector(".list");
 window.addEventListener("scroll", () => {
   if (window.matchMedia("(max-width: 415px)").matches) {
     if (window.scrollY >= 200) {
-      logo.style.display = "none";
+      logo.classList.add("slideup");
+      toTop.style.display = "block";
       toggleButton.style.display = "block";
     } else {
-      logo.style.display = "block";
+      logo.classList.remove("slideup");
+      toTop.style.display = "none";
       toggleButton.style.display = "none";
     }
   }
 });
-// click toggleButton 新增class="rwd-list"
+// click toggleButton .list新增class="rwd-list"
+// 為了opacity的transition需要setTimeout
 toggleButton.onclick = () => {
   list.classList.toggle("rwd-list");
+  setTimeout(() => {
+    if (list.classList.contains("rwd-list")) {
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+  }, 100);
 };
+
 // click list 分類列表就能消失
 window.onclick = function (event) {
-  let list = document.querySelector(".list");
-
   if (event.target == list) {
     list.classList.toggle("rwd-list");
   }

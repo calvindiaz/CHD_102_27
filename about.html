@@ -234,10 +234,10 @@
 
       window.addEventListener("scroll", () => {
         if (window.matchMedia("(max-width: 415px)").matches) {
-          if (window.scrollY >= 100) {
-            logo.style.display = "none";
+          if (window.scrollY >= 150) {
+            logo.classList.add("slideup");
           } else {
-            logo.style.display = "block";
+            logo.classList.remove("slideup");
           }
         }
       });

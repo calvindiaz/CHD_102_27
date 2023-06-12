@@ -121,15 +121,27 @@ search.onclick = () => {
   rwdSearch.classList.toggle("open");
 };
 
+// 捲動至頁頂
+let toTop = document.querySelector(".scroll-to-top");
+toTop.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 // 在415px以下捲動視窗，logo可以消失
 let logo = document.querySelector("img.logo");
 
 window.addEventListener("scroll", () => {
   if (window.matchMedia("(max-width: 415px)").matches) {
     if (window.scrollY >= 550) {
-      logo.style.display = "none";
+      logo.classList.add("slideup");
+      toTop.style.display = "block";
     } else {
-      logo.style.display = "block";
+      logo.classList.remove("slideup");
+
+      toTop.style.display = "none";
     }
   }
 });

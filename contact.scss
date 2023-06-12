@@ -39,13 +39,13 @@ section.QA {
         width: 30px;
         height: 30px;
         margin-left: auto;
-
+        flex-shrink: 0;
         span {
           position: absolute;
           width: 60%;
           height: 4px;
 
-          background-color: $secondColor;
+          background-color: $themeColor;
           transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           &:nth-child(1) {
             top: 13px;

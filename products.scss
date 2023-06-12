@@ -118,7 +118,7 @@ section.all-product {
         &:hover {
           background-color: rgb(255, 236, 197);
           transform: scale(1.05);
-          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.356);
+          box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.356);
         }
       }
     }
@@ -189,7 +189,8 @@ section.all-product {
     .list {
       display: none;
       width: 100%;
-
+      opacity: 0;
+      transition: opacity linear 0.25s;
       ul {
         background-color: $listColor;
         width: 70%;
@@ -208,6 +209,16 @@ section.all-product {
             text-decoration: none;
           }
         }
+      }
+
+      &.rwd-list {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        z-index: 21;
+        opacity: 1;
       }
     }
 
@@ -282,15 +293,5 @@ section.all-product {
       border: none;
       border-radius: 5px;
     }
-  }
-
-  .rwd-list {
-    display: block !important;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    z-index: 21;
   }
 }
