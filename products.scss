@@ -187,14 +187,14 @@ section.all-product {
     display: block;
 
     .list {
-      display: none;
       width: 100%;
       opacity: 0;
-      transition: opacity linear 0.25s;
+      transition: all linear 0.3s;
       ul {
         background-color: $listColor;
         width: 70%;
-
+        height: 0;
+        overflow: hidden;
         text-align: center;
         position: absolute;
         top: 100px;
@@ -219,6 +219,9 @@ section.all-product {
         top: 0px;
         z-index: 21;
         opacity: 1;
+        ul {
+          height: 625px;
+        }
       }
     }
 

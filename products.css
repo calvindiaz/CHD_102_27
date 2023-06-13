@@ -13,7 +13,7 @@ header section.logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.logo a img.logo {
@@ -66,7 +66,7 @@ header section.logo .top .rwd-nav {
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 header section.nav-list {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.nav-list nav {
@@ -95,7 +95,7 @@ footer {
   background-color: rgb(255, 151, 9);
 }
 footer .footer-content {
-  width: 70vw;
+  width: 70%;
   margin: 1rem auto 0 auto;
   padding: 1rem 0;
   display: flex;
@@ -254,6 +254,7 @@ footer .footer-content .mail .social-logo .logo {
     border-bottom: 1px solid rgb(255, 151, 9);
   }
   header section.logo .top .rwd-nav ul li a {
+    display: block;
     color: rgb(58, 58, 58);
     font-size: 1.5rem;
     text-decoration: none;
@@ -465,14 +466,15 @@ section.all-product .product .page .page-next a {
     display: block;
   }
   section.all-product .list {
-    display: none;
     width: 100%;
     opacity: 0;
-    transition: opacity linear 0.25s;
+    transition: all linear 0.3s;
   }
   section.all-product .list ul {
     background-color: rgb(140, 132, 126);
     width: 70%;
+    height: 0;
+    overflow: hidden;
     text-align: center;
     position: absolute;
     top: 100px;
@@ -496,6 +498,9 @@ section.all-product .product .page .page-next a {
     top: 0px;
     z-index: 21;
     opacity: 1;
+  }
+  section.all-product .list.rwd-list ul {
+    height: 625px;
   }
   section.all-product .product {
     width: 100%;

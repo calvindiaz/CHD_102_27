@@ -14,7 +14,7 @@ header section.logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.logo a img.logo {
@@ -67,7 +67,7 @@ header section.logo .top .rwd-nav {
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 header section.nav-list {
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 header section.nav-list nav {
@@ -96,7 +96,7 @@ footer {
   background-color: rgb(255, 151, 9);
 }
 footer .footer-content {
-  width: 70vw;
+  width: 70%;
   margin: 1rem auto 0 auto;
   padding: 1rem 0;
   display: flex;
@@ -255,6 +255,7 @@ footer .footer-content .mail .social-logo .logo {
     border-bottom: 1px solid rgb(255, 151, 9);
   }
   header section.logo .top .rwd-nav ul li a {
+    display: block;
     color: rgb(58, 58, 58);
     font-size: 1.5rem;
     text-decoration: none;

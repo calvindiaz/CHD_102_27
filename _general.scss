@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 70vw;
+    width: 70%;
     margin: auto;
     a {
       img.logo {
@@ -82,7 +82,7 @@ header {
   }
 
   section.nav-list {
-    width: 70vw;
+    width: 70%;
     margin: auto;
     nav {
       padding: 0.7rem 0;
@@ -112,7 +112,7 @@ header {
 footer {
   background-color: $themeColor;
   .footer-content {
-    width: 70vw;
+    width: 70%;
     margin: 1rem auto 0 auto;
     padding: 1rem 0;
     display: flex;
@@ -291,6 +291,7 @@ footer {
               padding: 1.2rem;
               border-bottom: 1px solid $themeColor;
               a {
+                display: block;
                 color: $secondColor;
                 font-size: 1.5rem;
                 text-decoration: none;

@@ -62,16 +62,9 @@ window.addEventListener("scroll", () => {
   }
 });
 // click toggleButton .list新增class="rwd-list"
-// 為了opacity的transition需要setTimeout
+
 toggleButton.onclick = () => {
   list.classList.toggle("rwd-list");
-  setTimeout(() => {
-    if (list.classList.contains("rwd-list")) {
-      list.style.display = "block";
-    } else {
-      list.style.display = "none";
-    }
-  }, 100);
 };
 
 // click list 分類列表就能消失
