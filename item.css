@@ -166,6 +166,7 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo a {
     display: inline-block;
     margin: auto;
+    padding-bottom: 0.1rem;
   }
   header section.logo a img.logo {
     width: 100%;
@@ -178,7 +179,6 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo .top {
     display: flex;
     width: 100%;
-    margin-top: 0.3rem;
     justify-content: space-around;
     padding: 0.5rem 0;
     border-top: 3px solid rgb(255, 151, 9);
@@ -229,6 +229,12 @@ footer .footer-content .mail .social-logo .logo {
     width: 200px;
     height: 45px;
     margin: 0.2rem auto;
+  }
+  header section.logo .top .rwd-search input::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  header section.logo .top .rwd-search input::placeholder {
+    font-size: 1.2rem;
   }
   header section.logo .top .rwd-search.open {
     height: 55px;
@@ -496,10 +502,12 @@ section.single-product .main-area .relate-item .item a img {
     display: flex;
     flex-wrap: wrap;
     margin: 1rem 0;
+    justify-content: space-evenly;
   }
   section.single-product .main-area .relate-item .item {
-    width: 190px;
+    width: 170px;
     height: 150px;
-    margin: 0.25rem;
+    padding: 0.2rem;
+    margin: 0;
   }
 }/*# sourceMappingURL=item.css.map */

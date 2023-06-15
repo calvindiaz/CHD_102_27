@@ -192,6 +192,8 @@ footer {
       a {
         display: inline-block;
         margin: auto;
+        padding-bottom: 0.1rem;
+
         img.logo {
           width: 100%;
           height: 100px;
@@ -206,7 +208,6 @@ footer {
       .top {
         display: flex;
         width: 100%;
-        margin-top: 0.3rem;
         justify-content: space-around;
         padding: 0.5rem 0;
         border-top: 3px solid $themeColor;
@@ -262,6 +263,10 @@ footer {
             width: 200px;
             height: 45px;
             margin: 0.2rem auto;
+
+            &::placeholder {
+              font-size: 1.2rem;
+            }
           }
 
           &.open {

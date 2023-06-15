@@ -49,42 +49,66 @@ let secondSwiper = new Swiper(".mySwiper", {
 
 // 輪播的iframe modal視窗
 let video = document.querySelector(".film");
-let videoSecond = document.querySelector(".film2");
-let videoThird = document.querySelector(".film3");
-let videoFour = document.querySelector(".film4");
-let videoFive = document.querySelector(".film5");
+let video2 = document.querySelector(".film2");
+let video3 = document.querySelector(".film3");
+let video4 = document.querySelector(".film4");
+let video5 = document.querySelector(".film5");
 
-function modal() {
-  video.style.display = "block";
-}
+let slide = document.querySelector(".slide");
+let slide2 = document.querySelector(".slide2");
+let slide3 = document.querySelector(".slide3");
+let slide4 = document.querySelector(".slide4");
+let slide5 = document.querySelector(".slide5");
 
-function modalSecond() {
-  videoSecond.style.display = "block";
-}
+document.addEventListener("click", (e) => {
+  if (e.target == slide) {
+    video.classList.toggle("open");
+  } else if (e.target == slide2) {
+    video2.classList.toggle("open");
+  } else if (e.target == slide3) {
+    video3.classList.toggle("open");
+  } else if (e.target == slide4) {
+    video5.classList.toggle("open");
+  } else if (e.target == slide5) {
+    video4.classList.toggle("open");
+  }
+});
 
-function modalThird() {
-  videoThird.style.display = "block";
-}
+window.onclick = function (event) {
+  if (event.target == video) {
+    video.classList.toggle("open");
+    video.querySelector("iframe").src =
+      "https://www.youtube.com/embed/ymVnEm4nGgQ";
+  } else if (event.target == video2) {
+    video2.classList.toggle("open");
+    video2.querySelector("iframe").src =
+      "https://www.youtube.com/embed/edZnUXuhVXc";
+  } else if (event.target == video3) {
+    video3.classList.toggle("open");
+    video3.querySelector("iframe").src =
+      "https://www.youtube.com/embed/b91Qfs4lMQA";
+  } else if (event.target == video5) {
+    video5.classList.toggle("open");
+    video5.querySelector("iframe").src =
+      "https://www.youtube.com/embed/4UZ2wT9Nef4";
+  } else if (event.target == video4) {
+    video4.classList.toggle("open");
+    video4.querySelector("iframe").src =
+      "https://www.youtube.com/embed/yBBcbb97hNU";
+  }
+};
 
-function modalFour() {
-  videoFour.style.display = "block";
-}
+// function closeBtn() {
+//   video.style.display = "none";
+//   video.querySelector("iframe").src =
+//     "https://www.youtube.com/embed/ymVnEm4nGgQ";
+// }
 
-function modalFive() {
-  videoFive.style.display = "block";
-}
-
-function closeBtn() {
-  video.style.display = "none";
-  video.querySelector("iframe").src =
-    "https://www.youtube.com/embed/ymVnEm4nGgQ";
-}
-
-function closeBtn2() {
-  videoSecond.style.display = "none";
-  videoSecond.querySelector("iframe").src =
-    "https://www.youtube.com/embed/edZnUXuhVXc";
-}
+// function closeBtn2() {
+//   videoSecond.style.display = "none";
+//   videoSecond.querySelector("iframe").src =
+//     "https://www.youtube.com/embed/edZnUXuhVXc";
+// }
 
 function closeBtn3() {
   videoThird.style.display = "none";
@@ -113,7 +137,7 @@ menu.addEventListener("click", () => {
   rwdNav.classList.toggle("open");
 });
 
-// 在手機版，click search事件
+// 在行動版，click search事件
 let search = document.querySelector(".search");
 let rwdSearch = document.querySelector(".rwd-search");
 

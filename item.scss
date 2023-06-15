@@ -339,10 +339,12 @@ section.single-product {
         display: flex;
         flex-wrap: wrap;
         margin: 1rem 0;
+        justify-content: space-evenly;
         .item {
-          width: 190px;
+          width: 170px;
           height: 150px;
-          margin: 0.25rem;
+          padding: 0.2rem;
+          margin: 0;
           // a {
           //   img {
           //     width: 100%;

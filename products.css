@@ -166,6 +166,7 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo a {
     display: inline-block;
     margin: auto;
+    padding-bottom: 0.1rem;
   }
   header section.logo a img.logo {
     width: 100%;
@@ -178,7 +179,6 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo .top {
     display: flex;
     width: 100%;
-    margin-top: 0.3rem;
     justify-content: space-around;
     padding: 0.5rem 0;
     border-top: 3px solid rgb(255, 151, 9);
@@ -229,6 +229,12 @@ footer .footer-content .mail .social-logo .logo {
     width: 200px;
     height: 45px;
     margin: 0.2rem auto;
+  }
+  header section.logo .top .rwd-search input::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  header section.logo .top .rwd-search input::placeholder {
+    font-size: 1.2rem;
   }
   header section.logo .top .rwd-search.open {
     height: 55px;
@@ -477,13 +483,13 @@ section.all-product .product .page .page-next a {
     overflow: hidden;
     text-align: center;
     position: absolute;
-    top: 100px;
+    top: 85px;
     left: 60px;
     transition: all 0.3s ease-in-out;
   }
   section.all-product .list ul li {
     list-style-type: none;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     border-bottom: 3px solid rgba(58, 58, 58, 0.5);
   }
   section.all-product .list ul li a {
@@ -500,7 +506,7 @@ section.all-product .product .page .page-next a {
     opacity: 1;
   }
   section.all-product .list.rwd-list ul {
-    height: 625px;
+    height: 528px;
   }
   section.all-product .product {
     width: 100%;
@@ -530,17 +536,21 @@ section.all-product .product .page .page-next a {
   section.all-product .product .cards .card .pic img {
     height: 200px;
   }
+  section.all-product .product .page {
+    margin: 1rem auto;
+  }
   section.all-product .product .page .page-first {
-    width: 48px;
+    width: 40px;
     height: 48px;
-    margin: 0 0.2rem;
+    margin: 0 0.15rem;
   }
   section.all-product .product .page .page-other {
-    margin: 0 0.2rem;
+    width: 40px;
+    margin: 0 0.15rem;
   }
   section.all-product .product .page .page-next {
     width: 55px;
-    margin: 0 0.2rem;
+    margin: 0 0.15rem;
   }
   .rwd-list-button {
     display: block;

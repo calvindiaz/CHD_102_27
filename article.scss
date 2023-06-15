@@ -185,6 +185,10 @@ section.content {
 
     .main {
       width: 100%;
+      p {
+        text-indent: 2rem;
+        padding: 0.2rem 0.8rem;
+      }
       img {
         width: 100%;
         // display: block;

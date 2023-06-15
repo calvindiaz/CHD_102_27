@@ -128,11 +128,13 @@ section.address {
 
 @media screen and (max-width: 415px) {
   .title {
+    width: 80%;
     margin: 1rem auto;
     p {
+      width: 100%;
       text-indent: 1rem;
       text-align: start;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 

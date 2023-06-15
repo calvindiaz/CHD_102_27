@@ -167,6 +167,7 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo a {
     display: inline-block;
     margin: auto;
+    padding-bottom: 0.1rem;
   }
   header section.logo a img.logo {
     width: 100%;
@@ -179,7 +180,6 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo .top {
     display: flex;
     width: 100%;
-    margin-top: 0.3rem;
     justify-content: space-around;
     padding: 0.5rem 0;
     border-top: 3px solid rgb(255, 151, 9);
@@ -230,6 +230,12 @@ footer .footer-content .mail .social-logo .logo {
     width: 200px;
     height: 45px;
     margin: 0.2rem auto;
+  }
+  header section.logo .top .rwd-search input::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  header section.logo .top .rwd-search input::placeholder {
+    font-size: 1.2rem;
   }
   header section.logo .top .rwd-search.open {
     height: 55px;
@@ -454,6 +460,10 @@ section.content .other .much a::after {
   }
   section.content .main {
     width: 100%;
+  }
+  section.content .main p {
+    text-indent: 2rem;
+    padding: 0.2rem 0.8rem;
   }
   section.content .main img {
     width: 100%;

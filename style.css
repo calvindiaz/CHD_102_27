@@ -174,6 +174,7 @@ section.news .content .other .more {
   padding: 0.9rem 0;
 }
 section.news .content .other .more a {
+  display: block;
   font-size: 2rem;
   text-decoration: none;
   color: rgb(58, 58, 58);
@@ -461,24 +462,6 @@ footer .footer-content .mail .social-logo .logo {
   left: 0;
   z-index: 21;
 }
-.film button,
-.film2 button,
-.film3 button,
-.film4 button,
-.film5 button {
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  cursor: pointer;
-  position: absolute;
-  top: 300px;
-  right: 400px;
-  border-radius: 50%;
-  color: white;
-  background-color: rgb(164, 159, 154);
-  border: none;
-  font-size: 2rem;
-}
 .film iframe,
 .film2 iframe,
 .film3 iframe,
@@ -489,6 +472,13 @@ footer .footer-content .mail .social-logo .logo {
   position: absolute;
   top: 300px;
   left: 533px;
+}
+.film.open,
+.film2.open,
+.film3.open,
+.film4.open,
+.film5.open {
+  display: block;
 }
 
 @media screen and (max-width: 415px) {
@@ -506,6 +496,7 @@ footer .footer-content .mail .social-logo .logo {
   header section.logo a {
     display: inline-block;
     margin: auto;
+    padding-bottom: 0.1rem;
   }
   header section.logo a img.logo {
     width: 100%;
@@ -519,7 +510,6 @@ footer .footer-content .mail .social-logo .logo {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin-top: 0.1rem;
     padding: 0.5rem 0;
     border-top: 3px solid rgb(255, 151, 9);
     border-bottom: 3px solid rgb(255, 151, 9);
@@ -620,8 +610,7 @@ footer .footer-content .mail .social-logo .logo {
   }
   section.news {
     width: 100%;
-    padding: 0;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0.1rem 0 0.1rem;
   }
   section.news .md-news-title {
     display: flex;
@@ -784,14 +773,6 @@ footer .footer-content .mail .social-logo .logo {
   }
   .scroll-to-top {
     opacity: 0.85;
-  }
-  .film button,
-  .film2 button,
-  .film3 button,
-  .film4 button,
-  .film5 button {
-    top: 30%;
-    right: 0px;
   }
   .film iframe,
   .film2 iframe,

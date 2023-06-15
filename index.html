@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -70,12 +71,12 @@
               </li>
               <li>
                 <a href="news.html"
-                  ><i class="fa-solid fa-bars"></i> 最新消息</a
+                  ><i class="fa-solid fa-table-list"></i> 最新消息</a
                 >
               </li>
               <li>
                 <a href="products.html"
-                  ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                  ><i class="fa-solid fa-bag-shopping"></i> 所有商品</a
                 >
               </li>
               <li>
@@ -102,11 +103,13 @@
               >
             </li>
             <li>
-              <a href="news.html"><i class="fa-solid fa-bars"></i> 最新消息</a>
+              <a href="news.html"
+                ><i class="fa-solid fa-table-list"></i> 最新消息</a
+              >
             </li>
             <li>
               <a href="products.html"
-                ><i class="fa-brands fa-shopify"></i> 所有商品</a
+                ><i class="fa-solid fa-bag-shopping"></i> 所有商品</a
               >
             </li>
             <li>
@@ -132,24 +135,40 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
 
-          <div class="swiper-slide" onclick="modal()">
-            <img src="./picture/video-cover/video-2.png" alt="" />
+          <div class="swiper-slide">
+            <img src="./picture/video-cover/video-2.png" class="slide" alt="" />
           </div>
 
-          <div class="swiper-slide" onclick="modalSecond()">
-            <img src="./picture/video-cover/video-3.png" alt="" />
+          <div class="swiper-slide">
+            <img
+              src="./picture/video-cover/video-3.png"
+              class="slide2"
+              alt=""
+            />
           </div>
 
-          <div class="swiper-slide" onclick="modalThird()">
-            <img src="./picture/video-cover/video-4.png" alt="" />
+          <div class="swiper-slide">
+            <img
+              src="./picture/video-cover/video-4.png"
+              class="slide3"
+              alt=""
+            />
           </div>
 
-          <div class="swiper-slide" onclick="modalFive()">
-            <img src="./picture/video-cover/video-5.png" alt="" />
+          <div class="swiper-slide">
+            <img
+              src="./picture/video-cover/video-5.png"
+              class="slide4"
+              alt=""
+            />
           </div>
 
-          <div class="swiper-slide" onclick="modalFour()">
-            <img src="./picture/video-cover/video-1.png" alt="" />
+          <div class="swiper-slide">
+            <img
+              src="./picture/video-cover/video-1.png"
+              class="slide5"
+              alt=""
+            />
           </div>
         </div>
         <!-- If we need pagination -->
@@ -498,9 +517,6 @@
     </section>
 
     <div class="film">
-      <button class="close-btn" onclick="closeBtn()">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </button>
       <iframe
         width="560"
         height="315"
@@ -513,9 +529,6 @@
     </div>
 
     <div class="film2">
-      <button class="close-btn" onclick="closeBtn2()">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </button>
       <iframe
         width="560"
         height="315"
@@ -528,9 +541,6 @@
     </div>
 
     <div class="film3">
-      <button class="close-btn" onclick="closeBtn3()">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </button>
       <iframe
         width="560"
         height="315"
@@ -543,9 +553,6 @@
     </div>
 
     <div class="film4">
-      <button class="close-btn" onclick="closeBtn4()">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </button>
       <iframe
         width="560"
         height="315"
@@ -558,9 +565,6 @@
     </div>
 
     <div class="film5">
-      <button class="close-btn" onclick="closeBtn5()">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </button>
       <iframe
         width="560"
         height="315"
@@ -606,8 +610,10 @@
     <div class="scroll-to-top">
       <img src="./picture/icon/up-arrow.png" alt="" />
     </div>
+
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="./app.js"></script>
   </body>
 </html>
