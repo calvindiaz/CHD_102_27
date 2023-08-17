@@ -5,6 +5,13 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+@mixin viewCenter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 $themeColor: rgb(255, 151, 9);
 $secondColor: rgb(58, 58, 58);
 $thirdColor: rgb(251, 242, 226);
@@ -947,11 +954,7 @@ footer {
   .film5 {
     iframe {
       width: 100%;
-      height: 233px;
-
-      top: 35%;
-      left: 0;
-      right: 0;
+      @include viewCenter();
     }
   }
 }
